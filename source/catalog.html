@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body class="page__body">
+    <header class="header-main page__header">
+      <div class="menu header-main__menu">
+        <a class="logo menu__logo">
+          <!-- Logo -->
+        </a>
+
+        <label class="visually-hidden" for="burger">Бургер</label>
+        <input class="menu__burder" type="checkbox" name="" id="burger">
+
+        <ul class="burger-popup burger-popup--open menu__burger-popup">
+          <li class="burger-popup__item">
+            <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="burger-popup__item">
+            <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="burger-popup__item burger-popup__item--search">
+            <a class="burger-popup__link" href="/search">Поиск по сайту</a>
+          </li>
+          <li class="burger-popup__item">
+            <a class="burger-popup__link burger-popup__item--basket" href="/basket">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-main__block">
+        <h1 class="header-main__title header-main__title--special">Каталог товаров</h1>
+      </div>
+    </header>
+
+    <main class="page__main">
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <picture class="catalog__image"></picture>
+
+            <div class="catalog__desc">
+              <h3 class="catalog__item-name">Зайчик-попрыгайчик</h3>
+              <p class="catalog__params">Рост 30 см, вес 200 г</p>
+            </div>
+            <div class="catalog__price-wrap">
+              <b class="catalog__price">1 200 руб.</b>
+              <!-- svg -->
+            </div>
+          </li>
+          <li class="catalog__item">
+            <picture class="catalog__image"></picture>
+
+            <div class="catalog__desc">
+              <h3 class="catalog__item-name">Корзинка для белья</h3>
+              <p class="catalog__params">Диаметр 15 см, высота 10 см</p>
+            </div>
+            <div class="catalog__price-wrap">
+              <b class="catalog__price">690 руб.</b>
+              <!-- svg -->
+            </div>
+          </li>
+          <li class="catalog__item">
+            <picture class="catalog__image"></picture>
+
+            <div class="catalog__desc">
+              <h3 class="catalog__item-name">Большая корзинка для игрушек</h3>
+              <p class="catalog__params">Диаметр 30 см, высота 30 см</p>
+            </div>
+            <div class="catalog__price-wrap">
+              <b class="catalog__price">1 500 руб.</b>
+              <!-- svg -->
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="process">
+        <h2 class="process__title">
+          <!-- svg -->
+          Процесс производства
+        </h2>
+        <video class="process__video" src="">
+          <!-- svg -->
+        </video>
+        <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="link-btn" href="">Сделать заказ</a>
+      </section>
+    </main>
+
+    <footer class="footer-main page__footer">
+      <ul class="socials">
+        <li class="socials__item">
+          <a class="social__link" href="www.instagram.com">
+            <span class="visually-hidden">Instagram</span>
+            <!-- svg -->
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="social__link" href="www.facebook.com">
+            <span class="visually-hidden">Facebook</span>
+            <!-- svg -->
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="social__link" href="www.twitter.com">
+            <span class="visually-hidden">Twitter</span>
+            <!-- svg -->
+          </a>
+        </li>
+      </ul>
+      <div class="footer-main__content">
+        <b class="footer-main__subject">Разработано</b>
+        <a class="footer-main__logo" href="">
+          <span class="visually-hidden">HTML Academy</span>
+          <!-- svg -->
+        </a>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal__wrap">
+        <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__desc">Выберите размер:</p>
+          <ul class="modal__list">
+            <li class="modal__item">s</li>
+            <li class="modal__item">m</li>
+            <li class="modal__item">l</li>
+          </ul>
+          <a class="modal__btn" href="">Добавить</a>
+      </div>
+    </div>
+  </body>
+</html>
