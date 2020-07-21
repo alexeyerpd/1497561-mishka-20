@@ -11,8 +11,9 @@
           <!-- Logo -->
         </a>
 
-        <label class="visually-hidden" for="burger">Бургер</label>
-        <input class="menu__burder" type="checkbox" name="" id="burger">
+        <button class="menu__burder" type="button">
+          <span class="visually-hidden">Бургер</span>
+        </button>
 
         <ul class="burger-popup burger-popup--open menu__burger-popup">
           <li class="burger-popup__item">
@@ -96,27 +97,28 @@
             <h3 class="advantages__title advantages__title--gift">Поставляется в подарочной упаковке</h3>
           </li>
         </ul>
-        <div class="comments about__comments">
-          <h3 class="title">Отзывы</h3>
-          <ul class="comments__list">
-            <li class="comments__item">
-              <p class="comments__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
-                и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-                больше лайков!</p>
-              <b class="comments__author">Анастасия Красильникова</b>
-              <span class="comments__author-id">@misssssiskras</span>
-            </li>
-          </ul>
-          <div class="switch comments__switch">
-            <button class="switch__control--left switch__control"></button>
-            <button class="switch__control--right switch__control"></button>
-          </div>
-          <a class="link-btn" href="">Написать</a>
-        </div>
       </section>
 
-      <address class="contacts main__contacts">
-        <h2 class="title"></h2>
+      <section class="comments main__comments">
+        <h2 class="title">Отзывы</h2>
+        <ul class="comments__list">
+          <li class="comments__item">
+            <p class="comments__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
+              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!</p>
+            <b class="comments__author">Анастасия Красильникова</b>
+            <span class="comments__author-id">@misssssiskras</span>
+          </li>
+        </ul>
+        <div class="switch comments__switch">
+          <button class="switch__control--left switch__control"></button>
+          <button class="switch__control--right switch__control"></button>
+        </div>
+        <a class="link-btn" href="">Написать</a>
+      </section>
+
+      <section class="contacts main__contacts">
+        <h2 class="title">Контакты</h2>
         <ul class="contacts__list">
           <li class="contacts__item">
             <span class="contacts__type">e-mail:</span>
@@ -124,12 +126,12 @@
           </li>
           <li class="contacts__item">
             <span class="contacts__type">адрес:</span>
-            <p class="contacts__text">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</p>
+            <address class="contacts__address">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</address>
           </li>
         </ul>
         <iframe src="" frameborder="0"></iframe>
-        <button class="link-btn">Напишите нам</button>
-      </address>
+        <a class="link-btn" href="">Напишите нам</a>
+      </section>
     </main>
 
     <footer class="footer-main page__footer">

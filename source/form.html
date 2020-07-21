@@ -11,8 +11,9 @@
           <!-- Logo -->
         </a>
 
-        <label class="visually-hidden" for="burger">Бургер</label>
-        <input class="menu__burder" type="checkbox" name="" id="burger">
+        <button class="menu__burder" type="button">
+          <span class="visually-hidden">Бургер</span>
+        </button>
 
         <ul class="burger-popup burger-popup--open menu__burger-popup">
           <li class="burger-popup__item">
@@ -38,58 +39,50 @@
       <form class="form">
         <h2 class="visually-hidden">Форма</h2>
         <p class="form__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <fieldset class="form__block">
-          <legend class="form__title">Тип</legend>
+        <div class="form__block">
+          <h3 class="form__title">Тип</h3>
           <ul class="form__list">
             <li class="radiobox-field form__item">
               <input id="accessories" class="radiobox-field__input" type="radio" name="type" value="accessories">
-              <span class="radiobox-field__view"></span>
-              <label for="accessories" class="form__label">Есть</label>
+              <label for="accessories" class="radiobox-field__label form__label">Есть</label>
             </li>
             <li class="radiobox-field">
               <input id="toy" class="radiobox-field__input" type="radio" name="type" value="toy">
-              <span class="radiobox-field__view"></span>
-              <label for="bluetooth-no" class="form__label">Нет</label>
+              <label for="bluetooth-no" class="radiobox-field__label form__label">Нет</label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="form__block">
-          <legend class="form__title">Цвет</legend>
+        </div>
+        <div class="form__block">
+          <h3 class="form__title">Цвет</h3>
           <ul class="form__list">
             <li class="checkbox-field form__item">
               <input id="color-white" class="checkbox-field__input" type="checkbox" name="color" value="white" checked>
-              <span class="checkbox-field__view"></span>
-              <label for="color-white" class="form__label">Белый</label>
+              <label for="color-white" class="checkbox-field__label form__label">Белый</label>
             </li>
             <li class="checkbox-field form__item">
               <input id="color-grey" class="checkbox-field__input" type="checkbox" name="color" value="grey" checked>
-              <span class="checkbox-field__view"></span>
-              <label for="color-grey" class="form__label">Серый</label>
+              <label for="color-grey" class="checkbox-field__label form__label">Серый</label>
             </li>
             <li class="checkbox-field form__item">
               <input id="color-tiffany" class="checkbox-field__input" type="checkbox" name="color" value="tiffany">
-              <span class="checkbox-field__view"></span>
-              <label for="color-tiffany" class="form__label">«Тиффани»</label>
+              <label for="color-tiffany" class="checkbox-field__label form__label">«Тиффани»</label>
             </li>
             <li class="checkbox-field form__item">
               <input id="color-black" class="checkbox-field__input" type="checkbox" name="color" value="black">
-              <span class="checkbox-field__view"></span>
-              <label for="color-black" class="form__label">Черный</label>
+              <label for="color-black" class="checkbox-field__label form__label">Черный</label>
             </li>
             <li class="checkbox-field form__item">
               <input id="color-pink" class="checkbox-field__input" type="checkbox" name="color" value="pink">
-              <span class="checkbox-field__view"></span>
-              <label for="color-pink" class="form__label">Розовый</label>
+              <label for="color-pink" class="checkbox-field__label form__label">Розовый</label>
             </li>
             <li class="checkbox-field form__item">
               <input id="color-orange" class="checkbox-field__input" type="checkbox" name="color" value="orange">
-              <span class="checkbox-field__view"></span>
-              <label for="color-orange" class="form__label">Оранжевый</label>
+              <label for="color-orange" class="checkbox-field__label form__label">Оранжевый</label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="form__block">
-          <legend class="form__title">фио</legend>
+        </div>
+        <div class="form__block">
+          <h3 class="form__title">фио</h3>
           <ul class="form__list">
             <li class="input-field input-field form__item">
               <label class="input-field__label">
@@ -110,9 +103,9 @@
               </label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="form__block">
-          <legend class="form__title">тел</legend>
+        </div>
+        <div class="form__block">
+          <h3 class="form__title">тел</h3>
           <ul class="form__list">
             <li class="input-field form__item">
               <label class="input-field__label input-field__label--with-icon input-field__label--tel">
@@ -121,9 +114,9 @@
               </label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="form__block">
-          <legend class="form__title">e-mail</legend>
+        </div>
+        <div class="form__block">
+          <h3 class="form__title">e-mail</h3>
           <ul class="form__list">
             <li class="input-field form__item">
               <label class="input-field__label input-field__label--with-icon input-field__label--email">
@@ -132,9 +125,9 @@
               </label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="form__block">
-          <legend class="form__title">доп</legend>
+        </div>
+        <div class="form__block">
+          <h3 class="form__title">доп</h3>
           <ul class="form__list">
             <li class="textarea-field form__item">
               <label class="textarea-field__label">
@@ -143,7 +136,7 @@
               </label>
             </li>
           </ul>
-        </fieldset>
+        </div>
         <span class="form__hint">*Поля обязательны для заполнения</span>
         <button class="btn" type="submit">Отпрвить заказ</button>
       </form>
