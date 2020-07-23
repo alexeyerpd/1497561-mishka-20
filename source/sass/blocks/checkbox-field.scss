@@ -1,0 +1,60 @@
+.checkbox-field__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $basic-black;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    display: block;
+
+    @include square(40px);
+    margin-right: 24px;
+
+    border: 2px solid $basic-black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    display: none;
+
+    width: 22px;
+    height: 16px;
+
+    background-color: $basic-black;
+  }
+}
+
+.checkbox-field__input {
+  display: none;
+
+  &:checked ~ .checkbox-field__label {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.radiobox-field__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    display: none;
+
+    @include circle(18px);
+
+    background-color: $basic-krayola-light;
+  }
+}

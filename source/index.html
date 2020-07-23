@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="header-main page__header">
@@ -11,33 +12,41 @@
           <!-- Logo -->
         </a>
 
-        <button class="menu__burder" type="button">
+        <!--  burger--open -->
+        <button class="burger menu__burger" type="button">
           <span class="visually-hidden">Бургер</span>
+          <div class="burger__divide"></div>
         </button>
 
-        <ul class="burger-popup burger-popup--open menu__burger-popup">
+        <ul class="burger-popup burger-popup--open menu__burger-popup unstyled-list">
           <li class="burger-popup__item">
             <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="burger-popup__item">
             <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="burger-popup__item burger-popup__item--search">
-            <a class="burger-popup__link" href="/search">Поиск по сайту</a>
+          <li class="burger-popup__item">
+            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--search" href="/search">Поиск по сайту</a>
           </li>
           <li class="burger-popup__item">
-            <a class="burger-popup__link burger-popup__item--basket" href="/basket">Корзина: пока пуста</a>
+            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--basket" href="/basket">Корзина: пока пуста</a>
           </li>
         </ul>
       </div>
       <div class="header-main__block">
-        <h1 class="header-main__title">Милые штуки ручной работы для дома</h1>
-        <ul class="header-nav header-main__header-nav">
+        <h1 class="header-main__title">Милые штуки ручной<br> работы для дома</h1>
+        <ul class="header-nav header-main__header-nav unstyled-list">
           <li class="header-nav__item">
-            <a class="header-nav__link" href="">Предметы интерьера</a>
+            <a class="header-nav__link" href="catalog.html">
+              <p class="header-nav__text">Предметы интерьера</p>
+              <!-- svg -->
+            </a>
           </li>
           <li class="header-nav__item">
-            <a class="header-nav__link" href="">Детские игрушки</a>
+            <a class="header-nav__link" href="catalog.html">
+              <p class="header-nav__text">Детские игрушки</p>
+              <!-- svg -->
+            </a>
           </li>
         </ul>
       </div>
@@ -49,18 +58,18 @@
         <b class="featured__subtitle">Товар недели</b>
         <p class="featured__desc">Экологически чистая пряжа,
           ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <ul class="featured__list">
+        <ul class="featured__list unstyled-list">
           <!-- TODO : через after -->
           <li class="featured__item">
-            <span class="featured__param featured__text">Цвет</span>
+            <span class="featured__param">Цвет</span>
             <span class="featured__text">«Тиффани»/серый</span>
           </li>
           <li class="featured__item">
-            <span class="featured__param featured__text">Диаметр</span>
+            <span class="featured__param">Диаметр</span>
             <span class="featured__text">25 см</span>
           </li>
           <li class="featured__item">
-            <span class="featured__param featured__text">Высота</span>
+            <span class="featured__param">Высота</span>
             <span class="featured__text">15 см</span>
           </li>
         </ul>
@@ -71,37 +80,43 @@
 
       <section class="about main__block">
         <h2 class="title">Коротко о нас:</h2>
-        <ul class="advantages about__advantages">
+        <ul class="advantages about__advantages unstyled-list">
           <li class="advantages__item">
             <!-- TODO svg -->
-            <h3 class="advantages__title advantages__title--flower">Экологически чистые материалы</h3>
+            <h3 class="advantages__title advantages__title--flower">Экологически
+              чистые материалы</h3>
           </li>
           <li class="advantages__item">
             <!-- TODO svg -->
-            <h3 class="advantages__title advantages__title--banknote">Скандинавский стиль по российской цене</h3>
+            <h3 class="advantages__title advantages__title--banknote">Скандинавский стиль
+              по российской цене</h3>
           </li>
           <li class="advantages__item">
             <!-- TODO svg -->
-            <h3 class="advantages__title advantages__title--heart">Увеличивает лайкина фотографиях</h3>
+            <h3 class="advantages__title advantages__title--heart">Увеличивает лайки
+              на фотографиях</h3>
           </li>
           <li class="advantages__item">
             <!-- TODO svg -->
-            <h3 class="advantages__title advantages__title--ball">Связано вручную с любовью и умилением</h3>
+            <h3 class="advantages__title advantages__title--ball">Связано вручную с
+              любовью и умилением</h3>
           </li>
           <li class="advantages__item">
             <!-- TODO svg -->
-            <h3 class="advantages__title advantages__title--rocket">Поддержка отечественного производителя</h3>
+            <h3 class="advantages__title advantages__title--rocket">Поддержка отечественного
+              производителя</h3>
           </li>
           <li class="advantages__item">
             <!-- TODO svg -->
-            <h3 class="advantages__title advantages__title--gift">Поставляется в подарочной упаковке</h3>
+            <h3 class="advantages__title advantages__title--gift">Поставляется в
+              подарочной упаковке</h3>
           </li>
         </ul>
       </section>
 
       <section class="comments main__comments">
         <h2 class="title">Отзывы</h2>
-        <ul class="comments__list">
+        <ul class="comments__list unstyled-list">
           <li class="comments__item">
             <p class="comments__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
               и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
@@ -111,15 +126,19 @@
           </li>
         </ul>
         <div class="switch comments__switch">
-          <button class="switch__control--left switch__control"></button>
-          <button class="switch__control--right switch__control"></button>
+          <button class="switch__control--left switch__control">
+            <!-- svg -->
+          </button>
+          <button class="switch__control--right switch__control">
+            <!-- svg -->
+          </button>
         </div>
-        <a class="link-btn" href="">Написать</a>
+        <a class="link-btn comments__link-btn" href="">Написать</a>
       </section>
 
       <section class="contacts main__contacts">
-        <h2 class="title">Контакты</h2>
-        <ul class="contacts__list">
+        <h2 class="title padding-mobile contacts__title">Контакты</h2>
+        <ul class="contacts__list unstyled-list padding-mobile">
           <li class="contacts__item">
             <span class="contacts__type">e-mail:</span>
             <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
@@ -129,16 +148,17 @@
             <address class="contacts__address">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</address>
           </li>
         </ul>
-        <iframe src="" frameborder="0"></iframe>
-        <a class="link-btn" href="">Напишите нам</a>
+        <iframe class="contacts__map" src="" frameborder="0"></iframe>
+        <a class="link-btn contacts__link-btn" href="">Напишите нам</a>
       </section>
     </main>
 
-    <footer class="footer-main page__footer">
-      <ul class="socials">
+    <footer class="footer-main page__footer padding-mobile">
+      <ul class="socials footer-main__block unstyled-list">
         <li class="socials__item">
           <a class="social__link" href="www.instagram.com">
             <span class="visually-hidden">Instagram</span>
+            I
             <!-- svg -->
           </a>
         </li>
@@ -146,34 +166,48 @@
           <a class="social__link" href="www.facebook.com">
             <span class="visually-hidden">Facebook</span>
             <!-- svg -->
+            F
           </a>
         </li>
         <li class="socials__item">
           <a class="social__link" href="www.twitter.com">
             <span class="visually-hidden">Twitter</span>
             <!-- svg -->
+            T
           </a>
         </li>
       </ul>
-      <div class="footer-main__content">
+      <div class="footer-main__content footer-main__block">
         <b class="footer-main__subject">Разработано</b>
         <a class="footer-main__logo" href="">
           <span class="visually-hidden">HTML Academy</span>
           <!-- svg -->
+          H
         </a>
       </div>
     </footer>
+    <!-- modal--open -->
     <div class="modal">
-      <div class="modal__wrap">
-        <h2 class="modal__title">Добавить в корзину</h2>
-          <p class="modal__desc">Выберите размер:</p>
-          <ul class="modal__list">
-            <li class="modal__item">s</li>
-            <li class="modal__item">m</li>
-            <li class="modal__item">l</li>
-          </ul>
-          <a class="modal__btn" href="">Добавить</a>
-      </div>
+      <form class="modal__wrap padding-mobile">
+        <h2 class="modal__title">Добавить
+          в корзину</h2>
+        <p class="modal__desc">Выберите размер:</p>
+        <ul class="modal__list unstyled-list">
+          <li class="modal__item">
+            <input class="modal__checkbox visually-hidden" type="checkbox" name="size" value="s"  id="modal-size-s" checked>
+            <label class="modal__label" for="modal-size-s">s</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__checkbox visually-hidden" type="checkbox" name="size" value="m" id="modal-size-m" >
+            <label class="modal__label" for="modal-size-m">m</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__checkbox visually-hidden" type="checkbox" name="size" value="l" id="modal-size-l" >
+            <label class="modal__label" for="modal-size-l">l</label>
+          </li>
+        </ul>
+        <a class="modal__btn" href="">Добавить</a>
+      </form>
     </div>
   </body>
 </html>

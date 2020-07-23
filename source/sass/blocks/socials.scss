@@ -1,0 +1,14 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 27px;
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}

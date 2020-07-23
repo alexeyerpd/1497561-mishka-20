@@ -1,0 +1,23 @@
+.header-nav__item {
+  background-color: $basic-aquamarine;
+
+  &:nth-child(2n) {
+    background-color: $basic-krayola-dark;
+  }
+}
+
+.header-nav__link {
+  display: flex;
+  padding: 24px 30px 31px;
+
+  font-size: 19px;
+  line-height: 24px;
+  color: $basic-white;
+  text-decoration: none;
+}
+
+.header-nav__text {
+  width: 50%;
+
+  margin: 0;
+}

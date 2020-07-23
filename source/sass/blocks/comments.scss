@@ -1,0 +1,33 @@
+.comments {
+  padding: 0 30px;
+}
+
+.comments__list {
+  margin-top: 14px;
+}
+
+.comments__comment {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.comments__author {
+  margin-top: 33px;
+
+  font-size: 17px;
+  line-height: 24px;
+  color: $basic-black;
+}
+
+.comments__author-id {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.comments__switch {
+  margin-top: 30px;
+}
+
+.comments__link-btn {
+  margin-top: 38px;
+}

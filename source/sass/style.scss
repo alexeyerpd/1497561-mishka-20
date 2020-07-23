@@ -1,1 +1,32 @@
-// Начните писать стили здесь
+// General
+
+@import "./general/normalize.scss";
+@import "./general/fonts.scss";
+@import "./general/variables.scss";
+@import "./general/mixins.scss";
+@import "./general/common.scss";
+
+// Block
+
+@import "./blocks/header-main.scss";
+@import "./blocks/header-nav.scss";
+@import "./blocks/burger-popup.scss";
+@import "./blocks/burger.scss";
+@import "./blocks/featured.scss";
+@import "./blocks/about.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/comments.scss";
+@import "./blocks/switch.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/footer-main.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/modal.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/process.scss";
+@import "./blocks/form.scss";
+@import "./blocks/radiobox-field.scss";
+@import "./blocks/checkbox-field.scss";
+@import "./blocks/input-field.scss";
+@import "./blocks/textarea-field.scss";
+@import "./blocks/link-btn.scss";
