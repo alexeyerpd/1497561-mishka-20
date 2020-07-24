@@ -1,0 +1,18 @@
+.switch {
+  display: flex;
+}
+
+.switch__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 52px;
+
+  border: 1px solid $basic-grey-light;
+  background-color: $basic-white;
+
+  &:first-child {
+    border-right: none;
+  }
+}

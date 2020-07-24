@@ -1,0 +1,29 @@
+.link-btn {
+  display: inline-block;
+  min-width: 260px;
+  max-width: 292px;
+  padding: 16px;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  color: $basic-dark;
+
+  border: 2px solid $basic-dark;
+  background-color: $basic-white;
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+    background-color: $basic-dark;
+  }
+
+  &:active {
+    color: $special-white-3;
+    background-color: $basic-dark;
+  }
+}

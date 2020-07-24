@@ -1,0 +1,28 @@
+.textarea-field__input {
+  width: 100%;
+  min-height: 142px;
+  padding: 17px 18px;
+
+  font: inherit;
+  font-size: 19px;
+  line-height: 18px;
+
+  border: 2px solid $basic-dark;
+  outline: none;
+  resize: none;
+
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: $basic-black-3;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $basic-krayola-light;
+  }
+
+  &:active {
+    border-color: $basic-krayola-light;
+  }
+}

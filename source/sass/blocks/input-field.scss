@@ -1,0 +1,42 @@
+.input-field__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field__title {
+  font-size: 17px;
+  line-height: 18px;
+  color: $basic-black;
+
+  & + .input-field__input {
+    margin-top: 16px;
+  }
+}
+
+.input-field__input {
+  padding: 0 0 17px;
+
+  font: inherit;
+  font-size: 19px;
+  line-height: 18px;
+
+  border: none;
+  border-bottom: 2px solid $basic-dark;
+
+  outline: none;
+
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: $basic-black-3;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $basic-krayola-light;
+  }
+
+  &:active {
+    border-color: $basic-krayola-light;
+  }
+}

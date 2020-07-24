@@ -1,0 +1,14 @@
+.catalog {
+  margin-top: 30px;
+}
+
+.catalog__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__item {
+  & + & {
+    margin-top: 30px;
+  }
+}

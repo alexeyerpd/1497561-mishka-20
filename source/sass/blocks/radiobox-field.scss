@@ -1,0 +1,42 @@
+.radiobox-field__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $basic-black;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    display: block;
+
+    @include circle(42px);
+    margin-right: 21px;
+
+    border: 2px solid $basic-black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    display: none;
+
+    @include circle(18px);
+
+    background-color: $basic-krayola-light;
+  }
+}
+
+.radiobox-field__input {
+  display: none;
+
+  &:checked ~ .radiobox-field__label {
+    &::after {
+      display: block;
+    }
+  }
+}
