@@ -1,6 +1,23 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  padding-top: 38px;
+  padding-bottom: 39px;
+
+  @include sm {
+    display: grid;
+    grid-template-columns: 50px repeat(4, 1fr) 50px;
+    grid-template-rows: repeat(4, min-content);
+    padding-top: 68px;
+    padding-bottom: 57px;
+  }
+
+  @include lg {
+    grid-template-columns: 50px repeat(6, 1fr) 50px;
+    grid-template-rows: repeat(3, min-content);
+    padding-top: 71px;
+    padding-bottom: 105px;
+  }
 }
 
 .contacts__title {
@@ -8,6 +25,20 @@
 
   font-size: 18px;
   line-height: 30px;
+
+  @include only-mobile {
+    @include outer-indent();
+  }
+
+  @include sm {
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 1;
+  }
+
+  @include lg {
+    grid-column: 3 / span 2;
+    margin-top: 79px;
+  }
 }
 
 .contacts__list {
@@ -15,6 +46,29 @@
   flex-direction: column;
 
   margin-top: 27px;
+
+  @include only-mobile {
+    @include outer-indent();
+  }
+
+  @include sm {
+    grid-column: 2 / span 4;
+    grid-row: 2 / span 1;
+
+    display: flex;
+    margin-top: 40px;
+  }
+
+  @include only-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include lg {
+    grid-column: 3 / span 2;
+    margin-top: 35px;
+    margin-right: 20px;
+  }
 }
 
 .contacts__item {
@@ -24,6 +78,18 @@
 
   & + & {
     margin-top: 30px;
+  }
+
+  @include sm {
+    width: 50%;
+
+    & + & {
+      margin-top: auto;
+    }
+  }
+
+  @include lg {
+    width: 100%;
   }
 }
 
@@ -46,9 +112,35 @@
   margin-top: 32px;
 
   background-color: $basic-grey-light;
+
+  @include sm {
+    grid-column: 1 / span 6;
+    grid-row: 3 / span 1;
+    margin-top: 49px;
+  }
+
+  @include lg {
+    grid-column: 5 / span 3;
+    grid-row: 1 / -1;
+    margin-top: 0;
+  }
 }
 
 .contacts__link-btn {
-  margin-top: 39px;
   align-self: center;
+  margin-top: 39px;
+
+  @include sm {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 1;
+    justify-self: center;
+    margin-top: 55px;
+  }
+
+  @include lg {
+    grid-row: 3 / span 1;
+    margin-top: 100px;
+    align-self: end;
+    justify-self: start;
+  }
 }

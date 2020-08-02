@@ -1,0 +1,30 @@
+.menu__wrap {
+  @include only-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 79px;
+
+    border-top: $special-border-width solid $basic-grey-light;
+    border-bottom: $special-border-width solid $basic-grey-light;
+
+    @include outer-indent();
+  }
+}
+
+.menu__logo {
+  width: 50%;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.menu__burger {
+  width: 50%;
+
+  @include sm {
+    display: none;
+  }
+}

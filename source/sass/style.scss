@@ -8,7 +8,11 @@
 
 // Block
 
+@import "./blocks/page.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/link-btn.scss";
 @import "./blocks/header-main.scss";
+@import "./blocks/header-subnav.scss";
 @import "./blocks/header-nav.scss";
 @import "./blocks/burger-popup.scss";
 @import "./blocks/burger.scss";
@@ -29,4 +33,4 @@
 @import "./blocks/checkbox-field.scss";
 @import "./blocks/input-field.scss";
 @import "./blocks/textarea-field.scss";
-@import "./blocks/link-btn.scss";
+@import "./blocks/slider.scss";

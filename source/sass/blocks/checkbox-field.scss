@@ -1,3 +1,7 @@
+.checkbox-field {
+  position: relative;
+}
+
 .checkbox-field__label {
   position: relative;
   display: flex;
@@ -11,7 +15,8 @@
   &::before {
     content: "";
     flex-shrink: 0;
-    display: block;
+    display: flex;
+    align-items: center;
 
     @include square(40px);
     margin-right: 24px;
@@ -33,7 +38,8 @@
 }
 
 .checkbox-field__input {
-  display: none;
+  position: absolute;
+  opacity: 0;
 
   &:checked ~ .checkbox-field__label {
     &::after {

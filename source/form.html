@@ -3,35 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="header-main page__header">
       <div class="menu header-main__menu">
-        <a class="logo menu__logo" href="index.html">
-          <!-- Logo -->
-        </a>
+        <div class="menu__wrap">
+          <a class="logo menu__logo" href="index.html">
+            <!-- Logo -->
+            Logo
+          </a>
 
-        <!--  burger--open -->
-        <button class="burger menu__burger" type="button">
-          <span class="visually-hidden">Бургер</span>
-          <div class="burger__divide"></div>
-        </button>
+          <!--  burger--open -->
+          <button class="burger menu__burger burger--open" type="button">
+            <span class="visually-hidden">Бургер</span>
+            <div class="burger__divide"></div>
+          </button>
+        </div>
 
-        <ul class="burger-popup burger-popup--open menu__burger-popup unstyled-list">
-          <li class="burger-popup__item">
-            <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--search" href="/search">Поиск по сайту</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--basket" href="/basket">Корзина: пока пуста</a>
-          </li>
-        </ul>
+        <div class="burger-popup burger-popup--open menu__burger-popup">
+          <ul class="burger-popup__list">
+            <li class="burger-popup__item">
+              <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="burger-popup__item">
+              <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--logo">
+              <a class="logo burger-popup__logo" href="index.html">
+                <!-- Logo -->
+                Logo
+              </a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink" href="">Новые поступления</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink" href="">Распродажа</a>
+            </li>
+          </ul>
+          <ul class="burger-popup__list">
+            <li class="burger-popup__item burger-popup__item--search">
+              <a class="burger-popup__link burger-popup__link--icon burger-popup__link--search" href="/search">
+                <!-- TODO svg -->
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--basket">
+              <a class="burger-popup__link burger-popup__link--icon burger-popup__link--basket" href="/basket">Корзина: пока пуста</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink burger-popup__link--subtext">Бесплатная доставка по России</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
       <div class="header-main__block">
         <h1 class="header-main__title header-main__title--special">Вязание на заказ</h1>
@@ -39,15 +66,17 @@
     </header>
 
     <main class="page__main">
-      <form class="form padding-mobile" action="https://echo.htmlacademy.ru/" method="POST">
+      <form class="form" action="https://echo.htmlacademy.ru/" method="POST">
         <h2 class="visually-hidden">Форма</h2>
-        <p class="form__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <div class="form__block">
+        <div class="form__desc-wrap">
+          <p class="form__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        </div>
+        <div class="form__block form__block--radiobox">
           <h3 class="form__title">
             <span class="form__title-text">Тип</span>
             <span class="form__title-decor"></span>
           </h3>
-          <ul class="form__list unstyled-list">
+          <ul class="form__list">
             <li class="radiobox-field form__item">
               <input id="accessories" class="radiobox-field__input" type="radio" name="type" value="accessories">
               <label for="accessories" class="radiobox-field__label form__label">Аксессуар для интерьера</label>
@@ -58,33 +87,33 @@
             </li>
           </ul>
         </div>
-        <div class="form__block">
+        <div class="form__block form__block--checkbox">
           <h3 class="form__title">
             <span class="form__title-text">Цвет</span>
             <span class="form__title-decor"></span>
           </h3>
-          <ul class="form__list unstyled-list">
-            <li class="checkbox-field form__item">
+          <ul class="form__list form__list--horizont">
+            <li class="checkbox-field form__item form__item--horizont">
               <input id="color-white" class="checkbox-field__input" type="checkbox" name="color" value="white" checked>
               <label for="color-white" class="checkbox-field__label form__label">Белый</label>
             </li>
-            <li class="checkbox-field form__item">
+            <li class="checkbox-field form__item form__item--horizont">
               <input id="color-grey" class="checkbox-field__input" type="checkbox" name="color" value="grey" checked>
               <label for="color-grey" class="checkbox-field__label form__label">Серый</label>
             </li>
-            <li class="checkbox-field form__item">
+            <li class="checkbox-field form__item form__item--horizont">
               <input id="color-tiffany" class="checkbox-field__input" type="checkbox" name="color" value="tiffany">
               <label for="color-tiffany" class="checkbox-field__label form__label">«Тиффани»</label>
             </li>
-            <li class="checkbox-field form__item">
+            <li class="checkbox-field form__item form__item--horizont">
               <input id="color-black" class="checkbox-field__input" type="checkbox" name="color" value="black">
               <label for="color-black" class="checkbox-field__label form__label">Черный</label>
             </li>
-            <li class="checkbox-field form__item">
+            <li class="checkbox-field form__item form__item--horizont">
               <input id="color-pink" class="checkbox-field__input" type="checkbox" name="color" value="pink">
               <label for="color-pink" class="checkbox-field__label form__label">Розовый</label>
             </li>
-            <li class="checkbox-field form__item">
+            <li class="checkbox-field form__item form__item--horizont">
               <input id="color-orange" class="checkbox-field__input" type="checkbox" name="color" value="orange">
               <label for="color-orange" class="checkbox-field__label form__label">Оранжевый</label>
             </li>
@@ -95,20 +124,20 @@
             <span class="form__title-text">фио</span>
             <span class="form__title-decor"></span>
           </h3>
-          <ul class="form__list unstyled-list">
-            <li class="input-field input-field form__item">
+          <ul class="form__list">
+            <li class="input-field input-field--with-title form__item">
               <label class="input-field__label">
                 <b class="input-field__title">Имя:</b>
                 <input class="input-field__input" type="text" name="firstname" placeholder="Введите ваше имя*" required>
               </label>
             </li>
-            <li class="input-field form__item">
+            <li class="input-field input-field--with-title form__item">
               <label class="input-field__label">
                 <b class="input-field__title">Фамилия:</b>
                 <input class="input-field__input" type="text" name="surname" placeholder="Укажите фамилию*" required>
               </label>
             </li>
-            <li class="input-field form__item">
+            <li class="input-field input-field--with-title form__item">
               <label class="input-field__label">
                 <b class="input-field__title">Отчество:</b>
                 <input class="input-field__input" type="text" name="middlename" placeholder="Отчество, если желаете">
@@ -116,12 +145,12 @@
             </li>
           </ul>
         </div>
-        <div class="form__block">
+        <div class="form__block form__block--combo">
           <h3 class="form__title">
             <span class="form__title-text">тел</span>
             <span class="form__title-decor"></span>
           </h3>
-          <ul class="form__list unstyled-list">
+          <ul class="form__list">
             <li class="input-field form__item">
               <label class="input-field__label input-field__label--with-icon input-field__label--tel">
                 <span class="visually-hidden">Телефон</span>
@@ -129,13 +158,11 @@
               </label>
             </li>
           </ul>
-        </div>
-        <div class="form__block">
           <h3 class="form__title">
             <span class="form__title-text">e-mail</span>
             <span class="form__title-decor"></span>
           </h3>
-          <ul class="form__list unstyled-list">
+          <ul class="form__list">
             <li class="input-field form__item">
               <label class="input-field__label input-field__label--with-icon input-field__label--email">
                 <span class="visually-hidden">EMAIL</span>
@@ -149,7 +176,7 @@
             <span class="form__title-text">доп</span>
             <span class="form__title-decor"></span>
           </h3>
-          <ul class="form__list unstyled-list">
+          <ul class="form__list">
             <li class="textarea-field form__item">
               <label class="textarea-field__label">
                 <span class="visually-hidden">Многострочное текстовое поле</span>
@@ -158,13 +185,21 @@
             </li>
           </ul>
         </div>
-        <p class="form__hint">*Поля обязательны для заполнения</p>
-        <button class="link-btn form__btn" type="submit">Отпрвить заказ</button>
+        <div class="form__wrap">
+          <div class="form__info-action">
+            <p class="form__hint">*Поля обязательны для заполнения</p>
+            <button class="link-btn form__btn" type="submit">Отпрвить заказ</button>
+          </div>
+        </div>
       </form>
     </main>
 
-    <footer class="footer-main page__footer padding-mobile">
-      <ul class="socials footer-main__block unstyled-list">
+    <footer class="footer-main page__footer">
+      <a class="logo footer-main__logo footer-main__block" href="index.html">
+        <!-- TODO svg -->
+        Logo
+      </a>
+      <ul class="socials footer-main__block">
         <li class="socials__item">
           <a class="social__link" href="www.instagram.com">
             <span class="visually-hidden">Instagram</span>

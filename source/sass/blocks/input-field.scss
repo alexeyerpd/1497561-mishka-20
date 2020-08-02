@@ -1,3 +1,18 @@
+.input-field {
+  @include sm {
+    &--with-title {
+      .input-field__label {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .input-field__title {
+        padding-right: 24px;
+      }
+    }
+  }
+}
+
 .input-field__label {
   display: flex;
   flex-direction: column;
@@ -14,6 +29,7 @@
 }
 
 .input-field__input {
+  width: 100%;
   padding: 0 0 17px;
 
   font: inherit;
@@ -23,6 +39,7 @@
   border: none;
   border-bottom: 2px solid $basic-dark;
 
+  background-color: transparent;
   outline: none;
 
   &::placeholder {

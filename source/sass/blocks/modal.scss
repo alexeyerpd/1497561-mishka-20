@@ -7,6 +7,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 100;
 
   background-color: $special-white-9;
 
@@ -21,21 +22,29 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 46px;
+  max-width: 566px;
+  padding: 29px 30px 46px;
 
   background-color: $basic-white;
   box-shadow: $box-shadow-secondary;
+
+  @include sm {
+    padding: 38px 108px 46px;
+  }
 }
 
 .modal__title {
   margin: 0;
-  margin-top: 29px;
 
   font-size: 25px;
   line-height: 30px;
   white-space: pre-line;
   color: $basic-black;
   text-transform: uppercase;
+
+  @include sm {
+    white-space: inherit;
+  }
 }
 
 .modal__desc {
@@ -50,6 +59,9 @@
   flex-wrap: wrap;
   align-items: baseline;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .modal__item {
@@ -105,4 +117,5 @@
   color: $basic-white;
 
   background-color: $basic-aquamarine;
+  border: none;
 }

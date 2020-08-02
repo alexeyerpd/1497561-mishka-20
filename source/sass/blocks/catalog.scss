@@ -1,14 +1,24 @@
 .catalog {
-  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include outer-indent();
 }
 
 .catalog__list {
-  display: flex;
-  flex-direction: column;
-}
+  display: grid;
+  row-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-.catalog__item {
-  & + & {
-    margin-top: 30px;
+  @include sm {
+    row-gap: 53px;
+  }
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 52px * 2) / 3));
+    gap: 52px;
   }
 }

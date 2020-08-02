@@ -3,39 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="header-main page__header">
       <div class="menu header-main__menu">
-        <a class="logo menu__logo">
-          <!-- Logo -->
-        </a>
+        <div class="menu__wrap">
+          <a class="logo menu__logo">
+            <!-- Logo -->
+            Logo
+          </a>
 
-        <!--  burger--open -->
-        <button class="burger menu__burger" type="button">
-          <span class="visually-hidden">Бургер</span>
-          <div class="burger__divide"></div>
-        </button>
+          <!--  burger--open -->
+          <button class="burger menu__burger burger--open" type="button">
+            <span class="visually-hidden">Бургер</span>
+            <div class="burger__divide"></div>
+          </button>
+        </div>
 
-        <ul class="burger-popup burger-popup--open menu__burger-popup unstyled-list">
-          <li class="burger-popup__item">
-            <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--search" href="/search">Поиск по сайту</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--basket" href="/basket">Корзина: пока пуста</a>
-          </li>
-        </ul>
+        <div class="burger-popup burger-popup--open menu__burger-popup">
+          <ul class="burger-popup__list">
+            <li class="burger-popup__item">
+              <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="burger-popup__item">
+              <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--logo">
+              <a class="logo burger-popup__logo">
+                <!-- Logo -->
+                Logo
+              </a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink" href="">Новые поступления</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink" href="">Распродажа</a>
+            </li>
+          </ul>
+          <ul class="burger-popup__list">
+            <li class="burger-popup__item burger-popup__item--search">
+              <a class="burger-popup__link burger-popup__link--icon burger-popup__link--search" href="/search">
+                <!-- TODO svg -->
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--basket">
+              <a class="burger-popup__link burger-popup__link--icon burger-popup__link--basket" href="/basket">Корзина: пока пуста</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink burger-popup__link--subtext">Бесплатная доставка по России</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
-      <div class="header-main__block">
+      <div class="header-main__block header-main__block--with-img">
         <h1 class="header-main__title">Милые штуки ручной<br> работы для дома</h1>
-        <ul class="header-nav header-main__header-nav unstyled-list">
+        <ul class="header-nav header-main__header-nav">
           <li class="header-nav__item">
             <a class="header-nav__link" href="catalog.html">
               <p class="header-nav__text">Предметы интерьера</p>
@@ -54,8 +81,8 @@
 
     <main class="page__main">
       <section class="featured main__block">
-        <h2 class="title">Вязаные корзинки</h2>
-        <b class="featured__subtitle">Товар недели</b>
+        <h2 class="title featured__title">Вязаные корзинки</h2>
+        <b class="featured__subtitle">Товар<br> недели</b>
         <p class="featured__desc">Экологически чистая пряжа,
           ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <ul class="featured__list unstyled-list">
@@ -73,13 +100,15 @@
             <span class="featured__text">15 см</span>
           </li>
         </ul>
-        <picture class="featured__image"></picture>
+        <picture class="featured__picture">
+          <img class="featured__image" src="" alt="img">
+        </picture>
         <b class="featured__price">Цена: 990 руб.</b>
         <a class="link-btn featured__link-btn" href="">Заказать</a>
       </section>
 
       <section class="about main__block">
-        <h2 class="title">Коротко о нас:</h2>
+        <h2 class="title about__title">Коротко о нас:</h2>
         <ul class="advantages about__advantages unstyled-list">
           <li class="advantages__item">
             <!-- TODO svg -->
@@ -115,30 +144,30 @@
       </section>
 
       <section class="comments main__comments">
-        <h2 class="title">Отзывы</h2>
-        <ul class="comments__list unstyled-list">
-          <li class="comments__item">
-            <p class="comments__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
-              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-              больше лайков!</p>
-            <b class="comments__author">Анастасия Красильникова</b>
-            <span class="comments__author-id">@misssssiskras</span>
-          </li>
-        </ul>
-        <div class="switch comments__switch">
-          <button class="switch__control--left switch__control">
-            <!-- svg -->
-          </button>
-          <button class="switch__control--right switch__control">
-            <!-- svg -->
-          </button>
+        <h2 class="title comments__title">Отзывы</h2>
+        <div class="slider comments__slider unstyled-list">
+          <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
+            и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+            больше лайков!</p>
+          <div class="slider__about-author">
+            <b class="slider__author">Анастасия Красильникова</b>
+            <span class="slider__author-id">@misssssiskras</span>
+          </div>
+          <div class="switch slider__switch">
+            <button class="switch__control--left switch__control">
+              <!-- svg -->
+            </button>
+            <button class="switch__control--right switch__control">
+              <!-- svg -->
+            </button>
+          </div>
         </div>
         <a class="link-btn comments__link-btn" href="">Написать</a>
       </section>
 
       <section class="contacts main__contacts">
-        <h2 class="title padding-mobile contacts__title">Контакты</h2>
-        <ul class="contacts__list unstyled-list padding-mobile">
+        <h2 class="title contacts__title">Контакты</h2>
+        <ul class="contacts__list unstyled-list">
           <li class="contacts__item">
             <span class="contacts__type">e-mail:</span>
             <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
@@ -153,8 +182,12 @@
       </section>
     </main>
 
-    <footer class="footer-main page__footer padding-mobile">
-      <ul class="socials footer-main__block unstyled-list">
+    <footer class="footer-main page__footer">
+      <a class="logo footer-main__logo footer-main__block">
+        <!-- TODO svg -->
+        Logo
+      </a>
+      <ul class="socials footer-main__block">
         <li class="socials__item">
           <a class="social__link" href="www.instagram.com">
             <span class="visually-hidden">Instagram</span>
@@ -188,11 +221,11 @@
     </footer>
     <!-- modal--open -->
     <div class="modal">
-      <form class="modal__wrap padding-mobile">
+      <form class="modal__wrap">
         <h2 class="modal__title">Добавить
           в корзину</h2>
         <p class="modal__desc">Выберите размер:</p>
-        <ul class="modal__list unstyled-list">
+        <ul class="modal__list">
           <li class="modal__item">
             <input class="modal__checkbox visually-hidden" type="checkbox" name="size" value="s"  id="modal-size-s" checked>
             <label class="modal__label" for="modal-size-s">s</label>
@@ -206,7 +239,7 @@
             <label class="modal__label" for="modal-size-l">l</label>
           </li>
         </ul>
-        <a class="modal__btn" href="">Добавить</a>
+        <button class="modal__btn" type="submit">Добавить</button>
       </form>
     </div>
   </body>
