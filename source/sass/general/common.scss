@@ -6,6 +6,9 @@ body {
 }
 
 body {
+  min-width: 320px;
+  max-width: 1150px;
+  margin: 0 auto;
   font-family: $font-family;
 
   color: $basic-dark;
@@ -34,11 +37,20 @@ a {
 
 .title {
   margin: 0;
-  margin-top: 31px;
 
   color: $basic-black;
   font-size: 25px;
   line-height: 30px;
+
+  @include sm {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include lg {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .padding-mobile {

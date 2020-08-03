@@ -1,5 +1,19 @@
 .card {
   border: 1px solid $basic-grey-light;
+
+  @include sm {
+    display: flex;
+  }
+
+  @include lg {
+    flex-direction: column;
+  }
+}
+
+.card__image-wrap {
+  @include only-tablet {
+    width: 50%;
+  }
 }
 
 .card__image {
@@ -8,12 +22,25 @@
   background-color: $basic-grey-light;
 }
 
-.card__desc {
-  margin: 0 28px;
-  margin-top: 28px;
-  padding-bottom: 18px;
+.card__info {
+  height: 100%;
+  padding: 28px 28px 27px;
 
-  border-bottom: 1px solid $basic-grey-light;
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 27px 34px 26px;
+  }
+
+  @include lg {
+    width: 100%;
+  }
+}
+
+.card__desc {
+  margin: 0;
 }
 
 .card__item-name {
@@ -29,19 +56,34 @@
   margin-top: 6px;
   font-size: 13px;
   line-height: 30px;
+
+  @include sm {
+    margin-top: 7px;
+  }
 }
 
 .card__price-wrap {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 23px 28px 27px;
+  margin-top: 18px;
+
+  @include lg {
+    margin-top: 12px;
+  }
 }
 
 .card__price {
-  width: 50%;
+  width: 100%;
+  padding-top: 23px;
 
   font-size: 15px;
   line-height: 24px;
   color: $basic-black;
+
+  border-top: 1px solid $basic-grey-light;
+
+  @include sm {
+    padding-top: 24px;
+  }
 }

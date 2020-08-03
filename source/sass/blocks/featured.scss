@@ -1,31 +1,118 @@
 .featured {
-  padding: 0 30px;
+  @include outer-indent();
+  padding-top: 40px;
+  padding-bottom: 69px;
+
+  display: grid;
+
+  @include sm {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows:
+      min-content
+      min-content
+      min-content
+      min-content
+      min-content;
+    align-items: start;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(6, (100%/6));
+    grid-template-rows:
+      min-content
+      min-content
+      min-content
+      min-content
+      min-content;
+    align-items: start;
+
+    padding-top: 54px;
+    padding-bottom: 96px;
+  }
+}
+
+.featured__title {
+  @include sm {
+    grid-column: 1 / span 3;
+  }
+
+  @include lg {
+    z-index: 10;
+    grid-column: 2 / span 2;
+    margin-top: 61px;
+
+    white-space: nowrap;
+  }
 }
 
 .featured__subtitle {
-  margin-top: 4px;
-
   font-size: 17px;
   line-height: 20px;
   color: $basic-aquamarine;
 
   text-transform: uppercase;
+
+  @include sm {
+    grid-column: 4 / span 1;
+    justify-self: end;
+    padding-right: 25px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  @include lg {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+
+    margin-top: 61px;
+    padding: 0;
+  }
 }
 
 .featured__desc {
+  margin: 0;
   margin-top: 18px;
 
   font-size: 15px;
   line-height: 24px;
+
+  @include sm {
+    grid-column: 1 / span 2;
+    margin-top: 38px;
+    margin-right: 42px;
+  }
+
+  @include lg {
+    grid-column: 2 / span 2;
+  }
+}
+
+.featured__list {
+  @include sm {
+    grid-column: 1 / span 2;
+    margin-top: 48px;
+    margin-right: 42px;
+  }
+
+  @include lg {
+    grid-column: 2 / span 2;
+  }
 }
 
 .featured__item {
   display: flex;
+  padding-bottom: 12px;
 
   font-size: 15px;
   line-height: 20px;
 
   border-bottom: 1px solid $basic-grey-light;
+
+  & + & {
+    margin-top: 10px;
+  }
 }
 
 .featured__text {
@@ -36,10 +123,36 @@
   width: 38%;
 }
 
+.featured__picture {
+  @include sm {
+    grid-column: 3 / span 2;
+    grid-row: 2 / -1;
+    margin-top: 38px;
+  }
+
+  @include lg {
+    grid-column: 4 / span 3;
+    grid-row: 1 / -1;
+    margin-top: 0;
+  }
+}
+
 .featured__image {
+  display: block;
+  max-width: 100%;
   width: 260px;
   min-height: 315px;
-  margin-top: 28px;
+
+  background-color: $basic-grey-light;
+
+  @include sm {
+    width: 100%;
+    min-height: 409px;
+  }
+
+  @include lg {
+    min-height: 636px;
+  }
 }
 
 .featured__price {
@@ -47,8 +160,31 @@
 
   font-size: 17px;
   line-height: 24px;
+
+  @include sm {
+    grid-column: 1 / span 2;
+    margin-top: 57px;
+    margin-right: 42px;
+
+    text-align: center;
+  }
+
+  @include lg {
+    grid-column: 2 / span 2;
+  }
 }
 
 .featured__link-btn {
   margin-top: 25px;
+
+  @include sm {
+    margin-top: 33px;
+    margin-right: 42px;
+
+    grid-column: 1 / span 2;
+  }
+
+  @include lg {
+    grid-column: 2 / span 2;
+  }
 }

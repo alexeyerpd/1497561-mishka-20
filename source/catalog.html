@@ -3,35 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="header-main page__header">
       <div class="menu header-main__menu">
-        <a class="logo menu__logo" href="index.html">
-          <!-- Logo -->
-        </a>
+        <div class="menu__wrap">
+          <a class="logo menu__logo" href="index.html">
+            <!-- Logo -->
+            Logo
+          </a>
 
-        <!--  burger--open -->
-        <button class="burger menu__burger" type="button">
-          <span class="visually-hidden">Бургер</span>
-          <div class="burger__divide"></div>
-        </button>
+          <!--  burger--open -->
+          <button class="burger menu__burger burger--open" type="button">
+            <span class="visually-hidden">Бургер</span>
+            <div class="burger__divide"></div>
+          </button>
+        </div>
 
-        <ul class="burger-popup burger-popup--open menu__burger-popup unstyled-list">
-          <li class="burger-popup__item">
-            <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--search" href="/search">Поиск по сайту</a>
-          </li>
-          <li class="burger-popup__item">
-            <a class="burger-popup__link burger-popup__link--icon burger-popup__link--basket" href="/basket">Корзина: пока пуста</a>
-          </li>
-        </ul>
+        <div class="burger-popup burger-popup--open menu__burger-popup">
+          <ul class="burger-popup__list">
+            <li class="burger-popup__item">
+              <a class="burger-popup__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="burger-popup__item">
+              <a class="burger-popup__link" href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--logo">
+              <a class="logo burger-popup__logo" href="index.html">
+                <!-- Logo -->
+                Logo
+              </a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink" href="">Новые поступления</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink" href="">Распродажа</a>
+            </li>
+          </ul>
+          <ul class="burger-popup__list">
+            <li class="burger-popup__item burger-popup__item--search">
+              <a class="burger-popup__link burger-popup__link--icon burger-popup__link--search" href="/search">
+                <!-- TODO svg -->
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--basket">
+              <a class="burger-popup__link burger-popup__link--icon burger-popup__link--basket" href="/basket">Корзина: пока пуста</a>
+            </li>
+            <li class="burger-popup__item burger-popup__item--subitem">
+              <a class="burger-popup__link burger-popup__link--sublink burger-popup__link--subtext">Бесплатная доставка по России</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
       <div class="header-main__block">
         <h1 class="header-main__title header-main__title--special">Каталог товаров</h1>
@@ -39,21 +66,23 @@
     </header>
 
     <main class="page__main">
-      <section class="catalog padding-mobile">
+      <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
-        <ul class="catalog__list unstyled-list">
+        <ul class="catalog__list">
           <li class="card catalog__item">
             <picture class="card__image-wrap">
               <img class="card__image" src="/" alt="Img" width="260" height="195">
             </picture>
 
-            <div class="card__desc">
-              <h3 class="card__item-name">Зайчик-попрыгайчик</h3>
-              <p class="card__params">Рост 30 см, вес 200 г</p>
-            </div>
-            <div class="card__price-wrap">
-              <b class="card__price">1 200 руб.</b>
-              <!-- svg -->
+            <div class="card__info">
+              <div class="card__desc">
+                <h3 class="card__item-name">Зайчик-попрыгайчик</h3>
+                <p class="card__params">Рост 30 см, вес 200 г</p>
+              </div>
+              <div class="card__price-wrap">
+                <b class="card__price">1 200 руб.</b>
+                <!-- svg -->
+              </div>
             </div>
           </li>
           <li class="card catalog__item">
@@ -61,46 +90,58 @@
               <img class="card__image" src="/" alt="Img" width="260" height="195">
             </picture>
 
-            <div class="card__desc">
-              <h3 class="card__item-name">Корзинка для белья</h3>
-              <p class="card__params">Диаметр 15 см, высота 10 см</p>
+            <div class="card__info">
+              <div class="card__desc">
+                <h3 class="card__item-name">Корзинка для белья</h3>
+                <p class="card__params">Диаметр 15 см, высота 10 см</p>
+              </div>
+              <div class="card__price-wrap">
+                <b class="card__price">690 руб.</b>
+                <!-- svg -->
+              </div>
             </div>
-            <div class="card__price-wrap">
-              <b class="card__price">690 руб.</b>
-              <!-- svg -->
-            </div>
+
           </li>
           <li class="card catalog__item">
             <picture class="card__image-wrap">
               <img class="card__image" src="/" alt="Img" width="260" height="195">
             </picture>
 
-            <div class="card__desc">
-              <h3 class="card__item-name">Большая корзинка для игрушек</h3>
-              <p class="card__params">Диаметр 30 см, высота 30 см</p>
+            <div class="card__info">
+              <div class="card__desc">
+                <h3 class="card__item-name">Большая корзинка для игрушек</h3>
+                <p class="card__params">Диаметр 30 см, высота 30 см</p>
+              </div>
+              <div class="card__price-wrap">
+                <b class="card__price">1 500 руб.</b>
+                <!-- svg -->
+              </div>
             </div>
-            <div class="card__price-wrap">
-              <b class="card__price">1 500 руб.</b>
-              <!-- svg -->
-            </div>
+
           </li>
         </ul>
       </section>
       <section class="process">
-        <h2 class="process__title">
-          <!-- svg -->
-          Процесс производства
-        </h2>
-        <video class="process__video" src="">
-          <!-- svg -->
-        </video>
-        <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="link-btn process__link-btn" href="">Сделать заказ</a>
+        <div class="process__wrap">
+          <h2 class="process__title">
+            <!-- svg -->
+            Процесс производства
+          </h2>
+          <video class="process__video" src="">
+            <!-- svg -->
+          </video>
+          <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="link-btn process__link-btn" href="">Сделать заказ</a>
+        </div>
       </section>
     </main>
 
-    <footer class="footer-main page__footer padding-mobile">
-      <ul class="socials footer-main__block unstyled-list">
+    <footer class="footer-main page__footer">
+      <a class="logo footer-main__logo footer-main__block" href="index.html">
+        <!-- TODO svg -->
+        Logo
+      </a>
+      <ul class="socials footer-main__block">
         <li class="socials__item">
           <a class="social__link" href="www.instagram.com">
             <span class="visually-hidden">Instagram</span>
@@ -134,11 +175,11 @@
     </footer>
     <!-- modal--open -->
     <div class="modal">
-      <form class="modal__wrap padding-mobile">
+      <form class="modal__wrap">
         <h2 class="modal__title">Добавить
           в корзину</h2>
         <p class="modal__desc">Выберите размер:</p>
-        <ul class="modal__list unstyled-list">
+        <ul class="modal__list">
           <li class="modal__item">
             <input class="modal__checkbox visually-hidden" type="checkbox" name="size" value="s"  id="modal-size-s" checked>
             <label class="modal__label" for="modal-size-s">s</label>
@@ -152,7 +193,7 @@
             <label class="modal__label" for="modal-size-l">l</label>
           </li>
         </ul>
-        <a class="modal__btn" href="">Добавить</a>
+        <button class="modal__btn" type="submit">Добавить</button>
       </form>
     </div>
   </body>
