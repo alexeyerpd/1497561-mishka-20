@@ -1,5 +1,19 @@
 .input-field {
+  & + & {
+    margin-top: 18px;
+  }
+
+  &--tel {
+    & .input-field__input {
+      padding-bottom: 14px;
+    }
+  }
+
   @include sm {
+    & + & {
+      margin-top: 25px;
+    }
+
     &--with-title {
       .input-field__label {
         flex-direction: row;
@@ -14,23 +28,78 @@
 }
 
 .input-field__label {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
+.input-field__icon {
+  position: absolute;
+  fill: $basic-black;
+  fill-opacity: 0.3;
+
+  &--tel {
+    top: 1px;
+    right: 7px;
+    width: 25px;
+    height: 24px;
+  }
+
+  &--email {
+    top: -1px;
+    right: 3px;
+    width: 32px;
+    height: 32px;
+  }
+
+  @include sm {
+    &--tel {
+      right: 26px;
+    }
+
+    &--email {
+      right: 22px;
+    }
+  }
+
+  @include lg {
+    &--tel {
+      top: 0;
+      right: 7px;
+    }
+
+    &--email {
+      top: -2px;
+      right: 4px;
+    }
+  }
+}
+
 .input-field__title {
+  padding-top: 4px;
   font-size: 17px;
   line-height: 18px;
   color: $basic-black;
 
   & + .input-field__input {
-    margin-top: 16px;
+    margin-top: 13px;
+  }
+
+  @include sm {
+    padding-top: 0;
+    font-size: 19px;
+
+    & + .input-field__input {
+      margin-top: 12px;
+    }
   }
 }
 
 .input-field__input {
   width: 100%;
-  padding: 0 0 17px;
+  padding: 0;
+  padding-right: 20px;
+  padding-bottom: 11px;
 
   font: inherit;
   font-size: 19px;
@@ -46,6 +115,10 @@
     font-size: 17px;
     line-height: 18px;
     color: $basic-black-3;
+
+    @include sm {
+      font-size: 19px;
+    }
   }
 
   &:hover,
@@ -55,5 +128,20 @@
 
   &:active {
     border-color: $basic-krayola-light;
+  }
+
+  &:hover ~ .input-field__icon,
+  &:focus ~ .input-field__icon {
+    fill: $basic-krayola-light;
+    fill-opacity: 1;
+  }
+
+  &:active ~ .input-field__icon {
+    fill: $basic-krayola-light;
+    fill-opacity: 1;
+  }
+
+  @include sm {
+    padding-left: 18px;
   }
 }

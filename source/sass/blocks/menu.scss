@@ -1,3 +1,9 @@
+.menu {
+  @include sm {
+    position: relative;
+  }
+}
+
 .menu__wrap {
   @include only-mobile {
     display: flex;
@@ -14,7 +20,28 @@
 }
 
 .menu__logo {
-  width: 50%;
+  width: (100% / 3);
+
+  @include sm {
+    position: absolute;
+    left: 50px;
+    z-index: 100;
+    display: flex;
+    width: 320px;
+    height: 100%;
+    align-items: center;
+  }
+
+  @include lg {
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+}
+
+.menu__burger-wrap {
+  width: (100% / 3);
+  text-align: right;
 
   @include sm {
     display: none;
@@ -22,9 +49,5 @@
 }
 
 .menu__burger {
-  width: 50%;
-
-  @include sm {
-    display: none;
-  }
+  margin-left: auto;
 }

@@ -12,7 +12,27 @@
   border: 1px solid $basic-grey-light;
   background-color: $basic-white;
 
+  outline: none;
+  cursor: pointer;
+
   &:first-child {
     border-right: none;
   }
+
+  &:hover .switch__arrow,
+  &:focus .switch__arrow {
+    fill: $basic-black-6;
+  }
+
+  &:active .switch__arrow {
+    fill: $basic-black-3;
+  }
+
+  @include sm {
+    border: none;
+  }
+}
+
+.switch__arrow {
+  fill: $basic-black;
 }

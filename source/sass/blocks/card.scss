@@ -1,5 +1,32 @@
 .card {
-  border: 1px solid $basic-grey-light;
+  outline: none;
+
+  &:focus &__info,
+  &:hover &__info {
+    box-shadow: $box-shadow-primary;
+  }
+
+  &:active &__info {
+    box-shadow: $box-shadow-tertiary;
+  }
+
+  &:focus &__icon,
+  &:hover &__icon {
+    fill: $basic-aquamarine;
+  }
+
+  &:active &__icon {
+    fill-opacity: 0.3;
+  }
+
+  &:focus &__item-name,
+  &:hover &__item-name {
+    color: $basic-black-6;
+  }
+
+  &:active &__item-name {
+    color: $basic-black-3;
+  }
 
   @include sm {
     display: flex;
@@ -7,6 +34,7 @@
 
   @include lg {
     flex-direction: column;
+    height: 100%;
   }
 }
 
@@ -18,24 +46,36 @@
 
 .card__image {
   display: block;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
 
   background-color: $basic-grey-light;
+
+  @include sm {
+    height: auto;
+  }
 }
 
 .card__info {
   height: 100%;
-  padding: 28px 28px 27px;
+  padding: 27px 27px 25px;
+
+  border: 1px solid $basic-grey-light;
 
   @include sm {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
-    padding: 27px 34px 26px;
+    height: auto;
+    padding: 27px 32px 24px 32px;
   }
 
   @include lg {
     width: 100%;
+    height: inherit;
+    padding: 28px 31px 24px 26px;
   }
 }
 
@@ -49,6 +89,10 @@
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
+
+  @include sm {
+    font-size: 20px;
+  }
 }
 
 .card__params {
@@ -58,7 +102,8 @@
   line-height: 30px;
 
   @include sm {
-    margin-top: 7px;
+    margin-top: 6px;
+    font-size: 15px;
   }
 }
 
@@ -66,10 +111,12 @@
   display: flex;
   align-items: center;
   width: 100%;
-  margin-top: 18px;
+  margin-top: 17px;
+
+  border-top: 1px solid $basic-grey-light;
 
   @include lg {
-    margin-top: 12px;
+    margin-top: 11px;
   }
 }
 
@@ -81,9 +128,17 @@
   line-height: 24px;
   color: $basic-black;
 
-  border-top: 1px solid $basic-grey-light;
-
   @include sm {
     padding-top: 24px;
+    font-size: 17px;
+  }
+}
+
+.card__icon {
+  margin-top: 16px;
+  fill: $basic-black-2;
+
+  @include sm {
+    margin-top: 15px;
   }
 }

@@ -1,0 +1,47 @@
+.logo {
+  outline: none;
+
+  &[href]:hover,
+  &[href]:focus {
+    .logo__header {
+      fill-opacity: 0.6;
+    }
+
+    .logo__footer {
+      fill: $basic-krayola;
+    }
+  }
+
+  &[href]:active {
+    .logo__header,
+    .logo__footer {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.logo__header {
+  display: none;
+
+  &--mobile {
+    @include only-mobile {
+      display: inline-block;
+    }
+  }
+
+  &--tablet {
+    @include only-tablet {
+      display: inline-block;
+    }
+  }
+
+  &--desktop {
+    @include lg {
+      display: inline-block;
+    }
+  }
+}
+
+.logo__footer {
+  fill: $basic-black;
+}

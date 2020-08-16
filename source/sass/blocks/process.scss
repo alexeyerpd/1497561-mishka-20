@@ -2,20 +2,29 @@
   @include outer-indent();
 
   margin: 0 0 58px;
+
+  @include sm {
+    margin-top: 23px;
+    margin-bottom: 61px;
+  }
+
+  @include lg {
+    margin-top: 0;
+    margin-bottom: 105px;
+    padding-top: 27px;
+  }
 }
 
 .process__wrap {
   display: grid;
 
   padding-top: 22px;
-  padding-bottom: 33px;
   border: 1px solid $basic-grey-light;
 
   @include sm {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     padding-top: 0;
-    padding-bottom: 46px;
   }
 
   @include lg {
@@ -27,33 +36,77 @@
 }
 
 .process__title {
+  position: relative;
   margin: 0;
-  padding: 0 34px;
+  padding: 0;
+  padding-left: 90px;
+  padding-right: 30px;
 
   font-size: 17px;
   line-height: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 50%;
+    width: 32px;
+    height: 22px;
+    transform: translateY(-50%);
+
+    background: url("../../img/icon-video.svg") no-repeat center;
+
+    @include sm {
+      left: 41px;
+      top: 37%;
+    }
+
+    @include lg {
+      left: 27px;
+      top: 39%;
+    }
+  }
+
+  &--top {
+    display: none;
+  }
+
+  &--bottom {
+    display: none;
+  }
+
+  @include only-mobile {
+    &--top {
+      display: block;
+    }
+  }
 
   @include sm {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     margin-top: 41px;
+    padding-left: 106px;
+
+    font-size: 20px;
+
+    &--bottom {
+      display: block;
+    }
   }
 
   @include lg {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
-    margin-top: 47px;
+    margin-top: 0;
+    padding-top: 96px;
     padding-left: 27px;
     padding-right: 57px;
   }
 }
 
-.process__video {
-  width: 100%;
-  min-height: 150px;
+.process__video-wrap {
+  position: relative;
   margin-top: 27px;
-
-  background-color: $basic-grey-light;
 
   @include sm {
     grid-column: 1 / span 1;
@@ -63,14 +116,87 @@
 
   @include lg {
     grid-column: 1 / span 2;
-    grid-row: 1 / -1;
+  }
+}
+
+.process__video {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+
+  background-color: $basic-grey-light;
+  background-image: url("../../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include sm {
+    min-height: 455px;
+    margin-top: 0;
+
+    background-image: url("../../img/video-tablet@1x.jpg");
+    background-size: cover;
+  }
+
+  @include lg {
+    min-height: 453px;
+    background-image: url("../../img/video-desktop@1x.jpg");
+  }
+}
+
+.process__video-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:hover .process__btn-icon,
+  &:focus .process__btn-icon {
+    transform: scaleX(1.2) scaleY(1.19);
+  }
+
+  &:active .process__btn-icon {
+    fill-opacity: 0.3;
+    transform: scaleX(0.8) scaleY(0.81);
+  }
+}
+
+.process__desc {
+  padding-bottom: 32px;
+
+  &:focus,
+  &:hover {
+    box-shadow: $box-shadow-primary;
+  }
+
+  &:active {
+    box-shadow: $box-shadow-tertiary;
+  }
+
+  &:focus .process__title--bottom,
+  &:hover .process__title--bottom {
+    color: $basic-black-6;
+  }
+
+  &:active .process__title--bottom {
+    color: $basic-black-3;
+  }
+
+  @include sm {
+    padding-bottom: 46px;
   }
 }
 
 .process__text {
   margin: 0;
   margin-top: 35px;
-  padding: 0 34px;
+  padding-left: 33px;
+  padding-right: 30px;
 
   font-size: 13px;
   line-height: 24px;
@@ -78,13 +204,17 @@
   @include sm {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
-    margin-top: 25px;
+    margin-top: 24px;
+    padding-left: 39px;
+
+    font-size: 15px;
+    line-height: 30px;
   }
 
   @include lg {
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
-    margin-top: 28px;
+    margin-top: 27px;
     padding-left: 27px;
     padding-right: 57px;
   }
@@ -94,11 +224,13 @@
   min-width: inherit;
   max-width: inherit;
   margin: 0 34px;
-  margin-top: 41px;
+  margin-top: 40px;
 
   @include sm {
     grid-column: 1 / span 1;
     grid-row: 4 / span 1;
+
+    margin: 41px 41px 0;
   }
 
   @include lg {

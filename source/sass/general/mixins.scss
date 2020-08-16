@@ -9,6 +9,11 @@
   height: $size;
 }
 
+@mixin rect($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 @mixin wrapper($maxWidth, $padding) {
   max-width: $maxWidth;
   margin: 0 auto;

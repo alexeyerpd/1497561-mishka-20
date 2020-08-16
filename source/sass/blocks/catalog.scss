@@ -3,17 +3,24 @@
   padding-bottom: 30px;
 
   @include outer-indent();
+
+  @include sm {
+    padding-top: 66px;
+  }
+
+  @include lg {
+    padding-top: 122px;
+  }
 }
 
 .catalog__list {
+  @include unstyled-list();
+
   display: grid;
   row-gap: 30px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 
   @include sm {
-    row-gap: 53px;
+    row-gap: 54px;
   }
 
   @include lg {

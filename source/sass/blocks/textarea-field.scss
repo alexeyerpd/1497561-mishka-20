@@ -6,7 +6,7 @@
 .textarea-field__input {
   width: 100%;
   min-height: 142px;
-  padding: 17px 18px;
+  padding: 16px 15px;
 
   font: inherit;
   font-size: 19px;
@@ -31,5 +31,11 @@
 
   &:active {
     border-color: $basic-krayola-light;
+  }
+
+  @include sm {
+    &::placeholder {
+      font-size: 19px;
+    }
   }
 }
