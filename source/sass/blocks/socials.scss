@@ -14,3 +14,20 @@
     margin-right: 40px;
   }
 }
+
+.socials__link {
+  outline: none;
+
+  &:hover .socials__icon,
+  &:focus .socials__icon {
+    fill: $basic-krayola;
+  }
+
+  &:active .socials__icon {
+    fill-opacity: 0.3;
+  }
+}
+
+.socials__icon {
+  fill: $special-black;
+}

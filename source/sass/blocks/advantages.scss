@@ -1,63 +1,128 @@
 .advantages {
+  @include unstyled-list();
   display: flex;
   flex-direction: column;
 
   @include sm {
-    display: grid;
-    grid-template-columns: repeat(4, (100%/4));
-    grid-template-rows: repeat(3, min-content);
-    row-gap: 57px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__block {
+  display: flex;
+  flex-direction: column;
+
+  @include sm {
+    width: 50%;
+    padding-right: 20px;
+
+    &:nth-child(1n + 3) {
+      margin-top: 57px;
+    }
   }
 }
 
 .advantages__item {
-  & + & {
-    margin-top: 30px;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 83px;
 
   @include sm {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 0;
+    padding-top: 111px;
 
     &:nth-child(1) {
-      grid-column: 1 / span 2;
-      grid-row: 1 / span 1;
+      padding-top: 98px;
     }
+  }
 
-    &:nth-child(2) {
-      grid-column: 1 / span 2;
-      grid-row: 2 / span 1;
-    }
-
-    &:nth-child(3) {
-      grid-column: 1 / span 2;
-      grid-row: 3 / span 1;
-    }
-
-    &:nth-child(4) {
-      grid-column: 3 / span 2;
-      grid-row: 1 / span 1;
-    }
-
-    &:nth-child(5) {
-      grid-column: 3 / span 2;
-      grid-row: 2 / span 1;
-    }
-
-    &:nth-child(6) {
-      grid-column: 3 / span 2;
-      grid-row: 3 / span 1;
+  @include lg {
+    &:nth-child(1) {
+      padding-top: 96px;
     }
   }
 }
 
 .advantages__title {
   margin: 0;
-  margin-top: 17px;
 
   font-size: 17px;
   line-height: 20px;
   color: $basic-black;
   white-space: pre-line;
+
+  @include sm {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.advantages__icon {
+  position: absolute;
+  fill: $basic-aquamarine;
+
+  &--flower {
+    top: 28px;
+    left: 8px;
+
+    @include sm {
+      top: 41px;
+    }
+
+    @include lg {
+      top: 39px;
+    }
+  }
+
+  &--money {
+    top: 29px;
+    left: 0;
+
+    @include sm {
+      top: 56px;
+      left: 1px;
+    }
+  }
+
+  &--heart {
+    top: 34px;
+    left: 8px;
+
+    @include sm {
+      top: 61px;
+    }
+  }
+
+  &--ball {
+    top: 31px;
+    left: 3px;
+
+    @include sm {
+      top: 45px;
+    }
+
+    @include lg {
+      top: 43px;
+    }
+  }
+
+  &--rocket {
+    top: 32px;
+    left: -5px;
+
+    @include sm {
+      top: 59px;
+    }
+  }
+
+  &--gift {
+    top: 30px;
+    left: 3px;
+
+    @include sm {
+      top: 57px;
+    }
+  }
 }

@@ -8,6 +8,7 @@ $basic-krayola-dark: #56c3b2;
 $basic-krayola-light: #62d1ba;
 
 $basic-grey-light: #ececec;
+$special-aquamarine: #149080;
 
 $special-grey-lighter: #c6c6c6;
 $special-grey-light: #e5e5e5;
@@ -17,7 +18,9 @@ $special-white-9: rgba(255, 255, 255, 0.9);
 $special-white-3: rgba(255, 255, 255, 0.3);
 $special-dark-1: rgba(68, 68, 68, 0.1);
 $special-dark-3: rgba(68, 68, 68, 0.3);
+$basic-black-2: rgba(0, 0, 0, 0.2);
 $basic-black-3: rgba(0, 0, 0, 0.3);
+$basic-black-6: rgba(0, 0, 0, 0.6);
 
 $special-black: #231f20;
 
@@ -25,6 +28,7 @@ $font-family: "OpenSans", "Arial", sans-serif;
 
 $box-shadow-primary: 0 6px 10px rgba(0, 0, 0, 0.1);
 $box-shadow-secondary: 0 5px 10px rgba(0, 1, 1, 0.25);
+$box-shadow-tertiary: 0 3px 5px rgba(0, 0, 0, 0.1);
 
 $basic-border-width: 2px;
 $special-border-width: 1px;
@@ -47,7 +51,7 @@ $line-height-special-s: 16px;
 $hor-space-mobile: 30px;
 
 $screen-xs: 320px;
-$screen-sm: 770px;
+$screen-sm: 768px;
 $screen-lg: 1150px;
 
 $padding-xs: 30px;
