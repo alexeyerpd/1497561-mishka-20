@@ -54,7 +54,7 @@
     height: 22px;
     transform: translateY(-50%);
 
-    background: url("../../img/icon-video.svg") no-repeat center;
+    background: url("../img/icon-video.svg") no-repeat center;
 
     @include sm {
       left: 41px;
@@ -125,7 +125,7 @@
   min-height: 150px;
 
   background-color: $basic-grey-light;
-  background-image: url("../../img/video-mobile@1x.jpg");
+  background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -133,13 +133,13 @@
     min-height: 455px;
     margin-top: 0;
 
-    background-image: url("../../img/video-tablet@1x.jpg");
+    background-image: url("../img/video-tablet@1x.jpg");
     background-size: cover;
   }
 
   @include lg {
     min-height: 453px;
-    background-image: url("../../img/video-desktop@1x.jpg");
+    background-image: url("../img/video-desktop@1x.jpg");
   }
 }
 

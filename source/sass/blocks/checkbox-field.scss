@@ -57,13 +57,13 @@
     width: 22px;
     height: 16px;
 
-    background: url("../../img/tick.svg") center no-repeat;
+    background: url("../img/tick.svg") center no-repeat;
 
     @include sm {
       left: 11px;
       width: 33px;
       height: 22px;
-      background: url("../../img/icon-tick.svg") center no-repeat;
+      background: url("../img/icon-tick.svg") center no-repeat;
     }
   }
 
