@@ -28,7 +28,7 @@
     "start": "gulp start",
     "webp": "gulp createWebp",
     "imagesmin": "gulp images",
-    "svg": "gulp sprite",
+    "svg": "gulp sprite"
   },
   "browserslist": [
     "last 2 versions",
