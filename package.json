@@ -29,7 +29,6 @@
     "webp": "gulp createWebp",
     "imagesmin": "gulp images",
     "svg": "gulp sprite",
-    "start2": "cd ./source && browser-sync start --server --files  *."
   },
   "browserslist": [
     "last 2 versions",
