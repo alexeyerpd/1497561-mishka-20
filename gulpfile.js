@@ -111,5 +111,5 @@ gulp.task("watcher", () => {
   gulp.watch("source/**/*.html").on("change", sync.reload);
 });
 
-gulp.task("build", gulp.series("clean", "copy", "styles", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "styles", "min-js","sprite", "html"));
 gulp.task("start", gulp.series("styles", "server", "watcher"));
