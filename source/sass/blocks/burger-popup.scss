@@ -5,6 +5,18 @@
 
   @include only-mobile {
     display: none;
+
+    &:not(.nojs) {
+      position: absolute;
+      top: 79px;
+      z-index: 1000;
+      width: 100%;
+      background-color: $basic-white;
+    }
+
+    &.nojs {
+      display: flex;
+    }
   }
 
   &--open {
@@ -17,8 +29,7 @@
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: $special-border-width solid $basic-grey-light;
-
+    @include wrapper();
     @include outer-indent();
   }
 
@@ -28,11 +39,10 @@
 }
 
 .burger-popup__list {
+  @include unstyled-list();
+
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 
   &:nth-child(1) .burger-popup__item:last-child {
     border-bottom: none;
@@ -246,6 +256,8 @@
   }
 
   @include only-mobile {
+    @include wrapper();
+    position: relative;
     padding-left: 76px;
   }
 

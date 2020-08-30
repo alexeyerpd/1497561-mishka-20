@@ -7,7 +7,7 @@
   @include sm {
     flex-wrap: wrap;
     padding-top: 54px;
-    padding-bottom: 42px;
+    padding-bottom: 50px;
   }
 
   @include lg {
@@ -19,6 +19,7 @@
 
 .form__desc-wrap {
   @include outer-indent();
+  @include wrapper();
 
   @include sm {
     padding-bottom: 11px;
@@ -42,9 +43,22 @@
   }
 }
 
-.form__block {
+.form__container {
   @include outer-indent();
+  @include wrapper();
+  width: 100%;
 
+  @include sm {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.form__block {
   &:last-of-type() .form__list {
     padding-bottom: 0;
   }
@@ -83,14 +97,7 @@
   }
 
   @include sm {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    &:nth-child(2n) {
+    &:nth-child(even) {
       background-color: $special-grey;
     }
 
@@ -108,7 +115,7 @@
     }
 
     &--combo {
-      padding-top: 62px;
+      padding-top: 11px;
 
       & .input-field {
         width: 75%;
@@ -235,6 +242,8 @@
 
 .form__wrap {
   @include outer-indent();
+  @include wrapper();
+  width: 100%;
 }
 
 .form__info-action {

@@ -1,6 +1,8 @@
 .header-main__title {
-  @include outer-indent();
   margin: 0;
+
+  @include outer-indent();
+  @include wrapper();
 
   font-size: 27px;
   line-height: 30px;
@@ -30,12 +32,29 @@
 
   &--with-img {
     min-height: 489px;
-    background: url("../img/hero-mobile@1x.jpg") no-repeat center;
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
     background-color: $basic-white;
-    background-size: auto;
+    background-size: 575px;
     background-position: center -17px;
+
+    @include retina2x {
+      background-image: url("../img/hero-mobile@2x.jpg");
+    }
   }
-  // TODO fix all
+
+  @include min(575px) {
+    &--with-img {
+      background: url("../img/hero-tablet@1x.jpg");
+      background-size: cover;
+      background-position: center;
+
+      @include retina2x {
+        background-image: url("../img/hero-tablet@2x.jpg");
+      }
+    }
+  }
+
   @include sm {
     min-height: 238px;
     padding-top: 101px;
@@ -43,16 +62,16 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -1px;
+      bottom: -2px;
       width: 100%;
       height: 24px;
-      background: url("../img/bg-zigzag-fill.svg") round repeat;
+      background: url("../img/bg-zigzag-fill.svg") round;
+      background-repeat: repeat;
     }
 
     &--with-img {
       min-height: 746px;
       padding-top: 155px;
-      background: url("../img/hero-tablet@1x.jpg") no-repeat center;
 
       &::after {
         bottom: -10px;
@@ -65,8 +84,13 @@
     padding-top: 101px;
 
     &--with-img {
-      min-height: 746px;;
-      background: url("../img/hero-desktop@1x.jpg") no-repeat center;
+      min-height: 746px;
+      padding-top: 157px;
+      background-image: url("../img/hero-desktop@1x.jpg");
+
+      @include retina2x {
+        background-image: url("../img/hero-desktop@2x.jpg");
+      }
 
       &::after {
         bottom: -16px;

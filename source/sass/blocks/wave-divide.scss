@@ -1,0 +1,67 @@
+.wave-divide {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background: url("../img/bg-zigzag-line.svg") round no-repeat;
+  }
+
+  &--featured {
+    &::after {
+      bottom: -8px;
+    }
+  }
+
+  &--comments {
+    &::after {
+      bottom: -9px;
+      left: 0;
+    }
+  }
+
+  @include sm {
+    &::after {
+      height: 22px;
+    }
+
+    &--featured {
+      &::after {
+        left: 0;
+        bottom: -6px;
+      }
+    }
+
+    &--comments {
+      &::after {
+        left: 0;
+        bottom: -5px;
+      }
+    }
+  }
+
+  @include lg {
+    &::after {
+      width: auto;
+      height: 30px;
+    }
+
+    &--featured {
+      &::after {
+        bottom: -8px;
+        left: 50px;
+        right: 50px;
+      }
+    }
+
+    &--comments {
+      &::after {
+        bottom: -50px;
+        left: 50px;
+        right: 50px;
+      }
+    }
+  }
+}

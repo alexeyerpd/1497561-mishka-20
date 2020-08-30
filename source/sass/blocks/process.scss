@@ -1,7 +1,8 @@
 .process {
   @include outer-indent();
+  @include wrapper();
 
-  margin: 0 0 58px;
+  margin-bottom: 58px;
 
   @include sm {
     margin-top: 23px;
@@ -128,6 +129,11 @@
   background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+
+  @include retina2x {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 
   @include sm {
     min-height: 455px;
@@ -135,11 +141,19 @@
 
     background-image: url("../img/video-tablet@1x.jpg");
     background-size: cover;
+
+    @include retina2x {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   }
 
   @include lg {
     min-height: 453px;
     background-image: url("../img/video-desktop@1x.jpg");
+
+    @include retina2x {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   }
 }
 

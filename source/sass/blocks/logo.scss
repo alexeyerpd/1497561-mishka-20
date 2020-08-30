@@ -4,7 +4,7 @@
   &[href]:hover,
   &[href]:focus {
     .logo__header {
-      fill-opacity: 0.6;
+      opacity: 0.6;
     }
 
     .logo__footer {
@@ -13,7 +13,10 @@
   }
 
   &[href]:active {
-    .logo__header,
+    .logo__header {
+      opacity: 0.3;
+    }
+
     .logo__footer {
       fill-opacity: 0.3;
     }
@@ -21,24 +24,17 @@
 }
 
 .logo__header {
-  display: none;
+  width: 86px;
+  height: 35px;
 
-  &--mobile {
-    @include only-mobile {
-      display: inline-block;
-    }
+  @include sm {
+    width: 113px;
+    height: 46px;
   }
 
-  &--tablet {
-    @include only-tablet {
-      display: inline-block;
-    }
-  }
-
-  &--desktop {
-    @include lg {
-      display: inline-block;
-    }
+  @include lg {
+    width: 148px;
+    height: 73px;
   }
 }
 

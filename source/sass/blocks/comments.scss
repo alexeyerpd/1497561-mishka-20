@@ -1,5 +1,34 @@
 .comments {
+  @include sm {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 86px;
+      z-index: -1;
+      width: 350px;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-color: $special-grey-light;
+
+      @include retina2x {
+        background-image: url("../img/review@2x.jpg");
+      }
+    }
+  }
+
+  @include lg {
+    &::before {
+      left: 50px;
+      bottom: 48px;
+    }
+  }
+}
+
+.comments__wrap {
   @include outer-indent();
+  @include wrapper();
 
   position: relative;
   padding-top: 27px;
@@ -12,19 +41,6 @@
 
     padding-top: 78px;
     padding-bottom: 86px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 86px;
-      z-index: -1;
-      width: 350px;
-      background-image: url("../img/review@1x.jpg");
-      background-repeat: no-repeat;
-      background-color: $special-grey-light;
-    }
   }
 
   @include lg {
@@ -84,21 +100,5 @@
   @include lg {
     grid-column: 5 / span 2;
     align-self: center;
-  }
-}
-
-.comments__beauti-divide {
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  @include lg {
-    &::after {
-      bottom: -43px;
-      left: 50px;
-      right: 50px;
-    }
   }
 }

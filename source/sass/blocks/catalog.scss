@@ -3,6 +3,7 @@
   padding-bottom: 30px;
 
   @include outer-indent();
+  @include wrapper();
 
   @include sm {
     padding-top: 66px;
