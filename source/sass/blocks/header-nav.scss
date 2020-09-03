@@ -1,9 +1,10 @@
 .header-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include unstyled-list();
+
+  width: 100%;
 
   @include sm {
+    @include wrapper();
     @include outer-indent();
 
     display: flex;
@@ -58,12 +59,7 @@
 }
 
 .header-nav__link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  min-height: 103px;
+  display: block;
 
   font-weight: 700;
   font-size: 19px;
@@ -80,6 +76,19 @@
 
   &:active .header-nav__icon {
     fill-opacity: 0.3;
+  }
+}
+
+.header-nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 103px;
+
+  @include only-mobile {
+    @include wrapper();
   }
 
   @include sm {

@@ -1,13 +1,16 @@
 .footer-main {
+  background-color: $special-grey;
+}
+
+.footer-main__wrap {
   @include outer-indent();
+  @include wrapper();
 
   display: flex;
   flex-direction: column;
   min-height: 143px;
   padding-top: 25px;
   padding-bottom: 27px;
-
-  background-color: $special-grey;
 
   @include sm {
     flex-direction: row;

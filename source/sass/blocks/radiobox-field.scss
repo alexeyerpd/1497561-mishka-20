@@ -5,6 +5,15 @@
     margin-top: 22px;
   }
 
+  &:hover .radiobox-field__label::before,
+  &:focus .radiobox-field__label::before {
+    border-color: $basic-krayola-light;
+  }
+
+  &:active .radiobox-field__label::before {
+    border-color: $basic-black-3;
+  }
+
   @include sm {
     & + & {
       margin-top: 23px;
@@ -31,7 +40,7 @@
     @include circle(39px);
     margin-right: 21px;
 
-    border: 2px solid $basic-black;
+    border: 2px solid $basic-dark;
 
     @include sm {
       @include circle(53px);
@@ -63,6 +72,12 @@
 .radiobox-field__input {
   position: absolute;
   opacity: 0;
+
+  &:focus ~ .radiobox-field__label {
+    &::before {
+      border-color: $basic-krayola-light;
+    }
+  }
 
   &:checked ~ .radiobox-field__label {
     &::after {

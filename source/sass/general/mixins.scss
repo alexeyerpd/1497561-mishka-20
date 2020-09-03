@@ -14,12 +14,6 @@
   height: $height;
 }
 
-@mixin wrapper($maxWidth, $padding) {
-  max-width: $maxWidth;
-  margin: 0 auto;
-  padding: $padding;
-}
-
 @mixin only-mobile() {
   @media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
     @content;
@@ -50,6 +44,12 @@
   }
 }
 
+@mixin min($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
 @mixin outer-indent() {
   @include xs {
     padding-left: $padding-xs;
@@ -67,8 +67,35 @@
   }
 }
 
+@mixin retina2x {
+  @media (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
 @mixin unstyled-list() {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@mixin wrapper() {
+  margin: 0 auto;
+
+  @include xs {
+    max-width: 320px;
+  }
+
+  @include sm {
+    max-width: 768px;
+  }
+
+  @include lg {
+    max-width: 1150px;
+  }
+}
+
+@mixin wrapperWithPadding() {
+  @include wrapper();
+  @include outer-indent();
 }

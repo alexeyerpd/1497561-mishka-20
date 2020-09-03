@@ -10,6 +10,8 @@
   border: none;
   padding: 0;
 
+  outline: none;
+
   &::before,
   &::after {
     content: "";
