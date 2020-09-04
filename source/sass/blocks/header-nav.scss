@@ -106,7 +106,7 @@
   }
 }
 
-.header-nav__wrap {
+.header-nav__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,7 +122,14 @@
     min-height: 119px;
     padding-left: 37px;
     padding-right: 36px;
+  }
+}
 
+.header-nav__wrap {
+  min-height: 103px;
+
+  @include sm {
+    min-height: 119px;
     font-size: 20px;
     line-height: 30px;
   }
