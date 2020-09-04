@@ -10,14 +10,14 @@ function onBurgerClose() {
   burgerPopup.classList.remove("burger-popup--open");
 }
 
-burger.addEventListener("click", (e) => {
+burger && burger.addEventListener("click", (e) => {
   const target = e.currentTarget;
 
   target.classList.toggle("burger--open");
   burgerPopup.classList.toggle("burger-popup--open");
 });
 
-cart.addEventListener("click", (e) => {
+cart && cart.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (window.location.pathname.startsWith("/form")) return;
@@ -28,7 +28,7 @@ cart.addEventListener("click", (e) => {
   }
 });
 
-modal.addEventListener("click", (e) => {
+modal && modal.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal")) {
     e.target.classList.remove("modal--open");
   }
