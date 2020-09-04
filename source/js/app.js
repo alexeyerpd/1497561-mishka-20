@@ -39,4 +39,4 @@ function init() {
   noJsElements.forEach((el) => el.classList.remove("nojs"));
 }
 
-// init();
+init();
