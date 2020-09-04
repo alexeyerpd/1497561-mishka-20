@@ -12,29 +12,77 @@
 }
 
 .header-nav__item {
-  & .header-nav__link {
-    background-color: $basic-aquamarine;
+  position: relative;
+  display: block;
 
-    &:hover,
-    &:focus {
-      background-color: $basic-aquamarine-light;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: $basic-white;
+  text-decoration: none;
+
+  outline: none;
+
+  @include only-mobile {
+    min-height: 103px;
+  }
+
+  &:hover,
+  &:focus {
+    .header-nav__icon {
+      fill-opacity: 0.7;
     }
 
-    &:active {
+    .header-nav__wrap {
+      background-color: $basic-aquamarine-light;
+      position: absolute;
+      min-height: 108px;
+      bottom: 0;
+      width: 100%;
+      transition: min-height 0.4s;
+
+      @include sm {
+        min-height: 124px;
+      }
+    }
+
+    .header-nav__text,
+    .header-nav__icon {
+      transition: transform 0.4s;
+      transform: translateY(-5px);
+    }
+  }
+
+  &:active {
+    .header-nav__icon {
+      fill-opacity: 0.3;
+    }
+
+    .header-nav__wrap {
       background-color: $basic-aquamarine-light;
     }
   }
 
-  &:nth-child(2n) .header-nav__link {
-    background-color: $basic-krayola-dark;
+  & .header-nav__wrap {
+    background-color: $basic-aquamarine;
+  }
+
+  &:nth-child(2n) {
+    .header-nav__wrap {
+      background-color: $basic-krayola-dark;
+    }
 
     &:hover,
     &:focus {
-      background-color: $basic-krayola;
+      .header-nav__wrap {
+        background-color: $basic-krayola;
+      }
     }
 
     &:active {
-      background-color: $basic-krayola;
+      .header-nav__wrap {
+        background-color: $basic-krayola;
+      }
     }
   }
 
@@ -58,34 +106,13 @@
   }
 }
 
-.header-nav__link {
-  display: block;
-
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
-  color: $basic-white;
-  text-decoration: none;
-
-  outline: none;
-
-  &:hover .header-nav__icon,
-  &:focus .header-nav__icon {
-    fill-opacity: 0.7;
-  }
-
-  &:active .header-nav__icon {
-    fill-opacity: 0.3;
-  }
-}
-
 .header-nav__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 103px;
   padding-left: 30px;
   padding-right: 30px;
-  min-height: 103px;
 
   @include only-mobile {
     @include wrapper();
@@ -108,10 +135,6 @@
   margin: 0;
 
   white-space: pre-line;
-
-  @include sm {
-    // top: -8px;
-  }
 }
 
 .header-nav__icon {
