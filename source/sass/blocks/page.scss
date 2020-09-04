@@ -5,9 +5,3 @@
     1fr
     min-content;
 }
-
-.page__main {
-  @include lg {
-    @include wrapper();
-  }
-}

@@ -112,4 +112,4 @@ gulp.task("watcher", () => {
 });
 
 gulp.task("build", gulp.series("clean", "copy", "styles", "min-js","sprite", "html"));
-gulp.task("start", gulp.series("styles", "min-js", "server", "watcher"));
+gulp.task("start", gulp.series("build", "server", "watcher"));
