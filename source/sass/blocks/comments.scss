@@ -1,0 +1,104 @@
+.comments {
+  @include sm {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 86px;
+      z-index: -1;
+      width: 350px;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-color: $special-grey-light;
+
+      @include retina2x {
+        background-image: url("../img/review@2x.jpg");
+      }
+    }
+  }
+
+  @include lg {
+    &::before {
+      left: 50px;
+      bottom: 48px;
+    }
+  }
+}
+
+.comments__wrap {
+  @include outer-indent();
+  @include wrapper();
+
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 51px;
+
+  @include sm {
+    display: grid;
+    grid-template-columns: repeat(4, (100%/4));
+    grid-template-rows: repeat(2, min-content);
+
+    padding-top: 78px;
+    padding-bottom: 86px;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(6, (100%/6));
+
+    padding-top: 75px;
+    padding-bottom: 96px;
+
+    &::before {
+      left: 50px;
+      bottom: 48px;
+    }
+  }
+}
+
+.comments__title {
+  @include sm {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    margin-top: 3px;
+  }
+
+  @include lg {
+    grid-column: 2 / span 2;
+  }
+}
+
+.comments__slider {
+  margin-top: 14px;
+
+  @include sm {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+    margin-top: 39px;
+  }
+
+  @include lg {
+    grid-column: 1 / span 6;
+    margin-top: 36px;
+  }
+}
+
+.comments__link-btn {
+  margin-top: 37px;
+
+  @include sm {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+    justify-self: end;
+    min-width: 175px;
+    min-height: 52px;
+    margin-top: 0;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  @include lg {
+    grid-column: 5 / span 2;
+    align-self: center;
+  }
+}

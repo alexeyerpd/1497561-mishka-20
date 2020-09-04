@@ -1,0 +1,33 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.socials__link {
+  outline: none;
+
+  &:hover .socials__icon,
+  &:focus .socials__icon {
+    fill: $basic-krayola;
+  }
+
+  &:active .socials__icon {
+    fill-opacity: 0.3;
+  }
+}
+
+.socials__icon {
+  fill: $special-black;
+}

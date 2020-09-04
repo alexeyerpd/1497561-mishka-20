@@ -1,0 +1,150 @@
+.header-nav {
+  @include unstyled-list();
+
+  width: 100%;
+
+  @include sm {
+    @include wrapper();
+    @include outer-indent();
+
+    display: flex;
+  }
+}
+
+.header-nav__item {
+  position: relative;
+  display: block;
+
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: $basic-white;
+  text-decoration: none;
+
+  outline: none;
+
+  @include only-mobile {
+    min-height: 103px;
+  }
+
+  &:hover,
+  &:focus {
+    .header-nav__icon {
+      fill-opacity: 0.7;
+    }
+
+    .header-nav__wrap {
+      background-color: $basic-aquamarine-light;
+      position: absolute;
+      min-height: 108px;
+      bottom: 0;
+      width: 100%;
+      transition: min-height 0.4s;
+
+      @include sm {
+        min-height: 124px;
+      }
+    }
+
+    .header-nav__text,
+    .header-nav__icon {
+      transition: transform 0.4s;
+      transform: translateY(-5px);
+    }
+  }
+
+  &:active {
+    .header-nav__icon {
+      fill-opacity: 0.3;
+    }
+
+    .header-nav__wrap {
+      background-color: $basic-aquamarine-light;
+    }
+  }
+
+  & .header-nav__wrap {
+    background-color: $basic-aquamarine;
+  }
+
+  &:nth-child(2n) {
+    .header-nav__wrap {
+      background-color: $basic-krayola-dark;
+    }
+
+    &:hover,
+    &:focus {
+      .header-nav__wrap {
+        background-color: $basic-krayola;
+      }
+    }
+
+    &:active {
+      .header-nav__wrap {
+        background-color: $basic-krayola;
+      }
+    }
+  }
+
+  @include only-mobile {
+    &:nth-child(1) {
+      .header-nav__icon {
+        right: 5px;
+        top: 2px;
+      }
+    }
+
+    &:nth-child(2) {
+      .header-nav__icon {
+        right: -2px;
+      }
+    }
+  }
+
+  @include sm {
+    width: 50%;
+  }
+}
+
+.header-nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 103px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include only-mobile {
+    @include wrapper();
+  }
+
+  @include sm {
+    min-height: 119px;
+    padding-left: 37px;
+    padding-right: 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.header-nav__text {
+  position: relative;
+  top: -4px;
+  width: (100% / 3);
+  margin: 0;
+
+  white-space: pre-line;
+}
+
+.header-nav__icon {
+  max-width: 60px;
+  flex-shrink: 1;
+
+  fill: $special-aquamarine;
+  fill-opacity: 0.5;
+
+  @include only-mobile {
+    position: relative;
+  }
+}

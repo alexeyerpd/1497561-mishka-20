@@ -1,0 +1,154 @@
+.advantages {
+  @include unstyled-list();
+  display: flex;
+  flex-direction: column;
+
+  @include sm {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -13px;
+  }
+
+  @include lg {
+    margin-top: -15px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 83px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $basic-black;
+  white-space: pre-line;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--flower {
+    &::before {
+      top: 28px;
+      left: 8px;
+      width: 32px;
+      height: 37px;
+      background-image: url("../img/icon-feature-flower.svg");
+    }
+
+    @include sm {
+      order: 1;
+
+      &::before {
+        top: 55px;
+      }
+    }
+  }
+
+  &--money {
+    &::before {
+      top: 29px;
+      left: 0;
+      width: 47px;
+      height: 27px;
+      background-image: url("../img/icon-feature-money.svg");
+    }
+
+    @include sm {
+      order: 3;
+
+      &::before {
+        top: 56px;
+        left: 1px;
+      }
+    }
+  }
+
+  &--heart {
+    &::before {
+      top: 34px;
+      left: 8px;
+      width: 34px;
+      height: 27px;
+      background-image: url("../img/icon-feature-heart.svg");
+    }
+
+    @include sm {
+      order: 5;
+
+      &::before {
+        top: 61px;
+      }
+    }
+  }
+
+  &--ball {
+    &::before {
+      top: 31px;
+      left: 3px;
+      width: 35px;
+      height: 34px;
+      background-image: url("../img/icon-feature-ball.svg");
+    }
+
+    @include sm {
+      order: 2;
+
+      &::before {
+        top: 58px;
+      }
+    }
+  }
+
+  &--rocket {
+    &::before {
+      top: 32px;
+      left: -5px;
+      width: 55px;
+      height: 23px;
+      background-image: url("../img/icon-feature-rocket.svg");
+    }
+
+    @include sm {
+      order: 4;
+
+      &::before {
+        top: 59px;
+      }
+    }
+  }
+
+  &--gift {
+    &::before {
+      top: 30px;
+      left: 3px;
+      width: 33px;
+      height: 32px;
+      background-image: url("../img/icon-feature-gift.svg");
+    }
+
+    @include sm {
+      order: 6;
+
+      &::before {
+        top: 57px;
+      }
+    }
+  }
+
+  @include sm {
+    width: 50%;
+    padding-right: 20px;
+    padding-top: 111px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+}

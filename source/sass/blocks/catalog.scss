@@ -1,0 +1,32 @@
+.catalog {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include outer-indent();
+  @include wrapper();
+
+  @include sm {
+    padding-top: 66px;
+  }
+
+  @include lg {
+    padding-top: 122px;
+  }
+}
+
+.catalog__list {
+  @include unstyled-list();
+
+  display: grid;
+  row-gap: 30px;
+
+  @include sm {
+    row-gap: 54px;
+  }
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 52px * 2) / 3));
+    gap: 52px;
+  }
+}

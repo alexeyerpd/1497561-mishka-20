@@ -1,0 +1,67 @@
+.burger {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 20px;
+  height: 14px;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+    background-color: $special-black;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--open {
+    width: 20px;
+    height: 20px;
+
+    & .burger__divide {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      left: inherit;
+    }
+
+    &::before {
+      transform: scale(1.3) rotate(45deg);
+      top: inherit;
+    }
+
+    &::after {
+      transform: scale(1.3) rotate(-45deg);
+      bottom: inherit;
+    }
+  }
+
+  @include sm {
+    display: none;
+  }
+}
+
+.burger__divide {
+  width: 100%;
+  height: 2px;
+
+  background-color: $special-black;
+}

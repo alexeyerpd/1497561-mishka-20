@@ -1,0 +1,90 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+
+  @include sm {
+    display: grid;
+    grid-template-columns: repeat(4, (100%/4));
+    grid-template-rows: repeat(2, min-content);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(6, (100%/6));
+  }
+}
+
+.slider__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 30px;
+
+  @include sm {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+
+    font-size: 17px;
+  }
+
+  @include lg {
+    grid-column: 2 / span 5;
+  }
+}
+
+.slider__about-author {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+
+  @include sm {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    margin-top: 62px;
+  }
+
+  @include lg {
+    grid-column: 2 / span 2;
+    margin-top: 44px;
+  }
+}
+
+.slider__author {
+  font-size: 17px;
+  line-height: 24px;
+  color: $basic-black;
+
+  @include sm {
+    font-size: 18px;
+  }
+
+  @include lg {
+    font-size: 17px;
+  }
+}
+
+.slider__author-id {
+  margin-top: 3px;
+  font-size: 17px;
+  line-height: 30px;
+
+  @include sm {
+    padding-bottom: 47px;
+  }
+}
+
+.slider__switch {
+  margin-top: 30px;
+
+  @include sm {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+    align-items: start;
+    justify-self: end;
+    width: 175px;
+    margin-top: 65px;
+  }
+
+  @include lg {
+    grid-column: 6 / span 1;
+    margin-top: 46px;
+  }
+}

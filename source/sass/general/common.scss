@@ -1,0 +1,67 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+
+  font-family: $font-family;
+  color: $basic-dark;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0;
+
+  color: $basic-black;
+  font-size: 25px;
+  line-height: 30px;
+
+  @include sm {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include lg {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.padding-mobile {
+  padding: 0 $hor-space-mobile;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

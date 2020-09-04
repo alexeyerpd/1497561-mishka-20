@@ -1,0 +1,45 @@
+.about {
+  @include outer-indent();
+  @include wrapper();
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include sm {
+    display: grid;
+    grid-template-columns: repeat(4, (100%/4));
+    grid-template-rows: repeat(2, min-content);
+    padding-top: 56px;
+    padding-bottom: 82px;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(6, (100%/6));
+    padding-top: 68px;
+    padding-bottom: 88px;
+  }
+}
+
+.about__title {
+  @include sm {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+  }
+
+  @include lg {
+    grid-column: 2 / span 4;
+  }
+}
+
+.about__advantages {
+  @include sm {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+    margin-top: 42px;
+  }
+
+  @include lg {
+    grid-column: 2 / span 4;
+    margin-top: 39px;
+  }
+}

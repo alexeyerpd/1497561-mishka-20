@@ -1,0 +1,43 @@
+.logo {
+  outline: none;
+
+  &[href]:hover,
+  &[href]:focus {
+    .logo__header {
+      opacity: 0.6;
+    }
+
+    .logo__footer {
+      fill: $basic-krayola;
+    }
+  }
+
+  &[href]:active {
+    .logo__header {
+      opacity: 0.3;
+    }
+
+    .logo__footer {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.logo__header {
+  width: 86px;
+  height: 35px;
+
+  @include sm {
+    width: 113px;
+    height: 46px;
+  }
+
+  @include lg {
+    width: 148px;
+    height: 73px;
+  }
+}
+
+.logo__footer {
+  fill: $basic-black;
+}

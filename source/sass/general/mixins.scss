@@ -1,0 +1,101 @@
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin rect($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin only-mobile() {
+  @media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+    @content;
+  }
+}
+
+@mixin only-tablet() {
+  @media (min-width: $screen-sm) and (max-width: $screen-lg - 1) {
+    @content;
+  }
+}
+
+@mixin xs() {
+  @media (min-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin sm() {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin min($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin outer-indent() {
+  @include xs {
+    padding-left: $padding-xs;
+    padding-right: $padding-xs;
+  }
+
+  @include sm {
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+  }
+
+  @include lg {
+    padding-left: $padding-lg;
+    padding-right: $padding-lg;
+  }
+}
+
+@mixin retina2x {
+  @media (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin unstyled-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin wrapper() {
+  margin: 0 auto;
+
+  @include xs {
+    max-width: 320px;
+  }
+
+  @include sm {
+    max-width: 768px;
+  }
+
+  @include lg {
+    max-width: 1150px;
+  }
+}
+
+@mixin wrapperWithPadding() {
+  @include wrapper();
+  @include outer-indent();
+}
